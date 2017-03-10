@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>DSCH version 3.1 - Simulate menu</TITLE>
+<META NAME="Version" CONTENT="8.0.3429">
+<link rel="stylesheet" href="etienne.css" type="text/css">
+<META NAME="Date" CONTENT="08/12/05">
+<style type="text/css">
+<!--
+.Style1 {
+	font-family: Symbol;
+	font-weight: bold;
+}
+-->
+</style></HEAD>
+<BODY class="basic">
+<b>
+<h1>Simulate Menu</h1>
+</b>
+<br>
+  <h2><a name="floating"></a>Check Floating Lines </h2>
+  <blockquote>
+    <p>The command <B>Insert -&gt; User Symbol</B> is used to add a user defined symbol to the existing schematic diagram. The user symbol is created using the command <B>File -&gt; Schema To new Symbol</B>. The inserted symbol can be fixed at the desired location.</p>
+    <p></p>
+</blockquote>
+<h2><a name="critical"></a>Show Critical Path </h2>
+<blockquote>
+    <P> <span class="basic"><span >The critical path is the series of logic gates between the output and input with the longest propagation delay. The command <b>Simulate </b></span><span class="Style1">-&gt;</span><b><span >Show Critical Path</span></b><span > shows the graph of the critical path. The list of symbols and cumulated delays which build the critical path are also listed.</span></span></P>
+    <P><img src="criticalpath.GIF" width="700" height="510"></P>
+</blockquote>
+    <h2><a name="simulate"></a>Start Simulation </h2>
+    <blockquote>
+      <p class=basic><span >The command &quot;<b>Start Simulation</b>&quot; launches the electrical net extraction and the logic simulation. The simulation speed may be controlled by the cursor &quot;Fast-Slow&quot;. The simulation may be paused, run step by step and stopped. By default, the logic state of all interconnects is made visible. You may also see each pin state by a tic in front of &quot;Show pin state&quot;, or see the details of each symbol using the tic in front of &quot;Symbol State&quot;. </span></p>
+      <p class=basic><img src="simulation.GIF" width="658" height="245"><span >
+        <![if !supportEmptyParas]>
+</span></p>
+</blockquote>
+    <h2><a name="options"></a>Simulate Options </h2>
+    <blockquote>
+      <p class="basic"><span >The simulation parameters (<b>Simulation Options</b>) are: the simulation step (10ps by default), the gate delay, wire delay, supply voltage, and elementary gate current. This parameters are loaded from .TEC files at initialization or with the command <b>File </b></span><b><span><span
+>-&gt;</span></span></b><b><span
+> Select Foundry.</span></b></p>
+      <p><img src="simulateoptions.GIF" width="697" height="406"></p>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p><A HREF="index.htm">Back</A></p>
+</BODY>
+</HTML>

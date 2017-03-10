@@ -1,0 +1,23 @@
+DSCH 3.1 - technology file
+NAME "CMOS 65nm"
+VERSION 15.08.2007
+* Time unit for simulation
+TIMEUNIT = 0.005
+* Supply voltage
+VDD = 1.0
+* Typical gate delay in ns
+TDelay = 0.005
+THvDelay = 0.010
+THsDelay = 0.003
+* Typical wire delay in ns
+TWireDelay = 0.002
+* Typical current in mA
+TCurrent = 0.1
+* Default MOS length and width
+ML  = "0.07u"
+MHVL = "0.2u"
+MNW = "0.3u"
+MPW = "0.5u"
+*
+* End cmos65n.tec
+*

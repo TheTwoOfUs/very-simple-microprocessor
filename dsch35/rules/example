@@ -1,0 +1,43 @@
+DSCH 3.1
+VERSION 02/10/2007 18:18:42
+BB(55,-5,90,40)
+SYM  #nmos
+BB(70,20,90,40)
+TITLE 85 25  #nmos_1
+MODEL 901
+PROP   0.3u 0.07u MN                                                                                                                              
+REC(71,25,19,15,r)
+VIS 0
+PIN(90,40,0.000,0.000)s
+PIN(70,30,0.000,0.000)g
+PIN(90,20,0.003,0.000)d
+LIG(80,30,70,30)
+LIG(80,36,80,24)
+LIG(82,36,82,24)
+LIG(90,24,82,24)
+LIG(90,20,90,24)
+LIG(90,36,82,36)
+LIG(90,40,90,36)
+VLG nmos nmos(drain,source,gate);
+FSYM
+SYM  #pmos
+BB(55,-5,75,15)
+TITLE 70 0  #pmos_2
+MODEL 902
+PROP   0.5u 0.07u MP                                                                                                                              
+REC(56,0,19,15,r)
+VIS 0
+PIN(75,-5,0.000,0.000)s
+PIN(55,5,0.000,0.000)g
+PIN(75,15,0.003,0.000)d
+LIG(55,5,61,5)
+LIG(63,5,63,5)
+LIG(65,11,65,-1)
+LIG(67,11,67,-1)
+LIG(75,-1,67,-1)
+LIG(75,-5,75,-1)
+LIG(75,11,67,11)
+LIG(75,15,75,11)
+VLG pmos pmos(drain,source,gate);
+FSYM
+FFIG example

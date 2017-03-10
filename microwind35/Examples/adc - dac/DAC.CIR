@@ -1,0 +1,130 @@
+CIRCUIT D:\Documents and Settings\sicard\Mes documents\microwind31\examples\DAC.MSK
+*
+* IC Technology: CMOS 90nm, 6 Metal Copper - strained SiGe - LowK
+*
+VDD 1 0 DC 1.20
+VB0 24 0 PULSE(0.00 1.20 1N 1N 1N 1N 5N)
+VB1 23 0 PULSE(0.00 1.20 4N 1N 1N 4N 10N)
+VB2 22 0 PULSE(0.00 1.20 9N 1N 1N 9N 20N)
+*
+* List of nodes
+* "N2" corresponds to n°2
+* "N4" corresponds to n°4
+* "N5" corresponds to n°5
+* "N6" corresponds to n°6
+* "Vout" corresponds to n°7
+* "N8" corresponds to n°8
+* "N9" corresponds to n°9
+* "~B2" corresponds to n°11
+* "~B1" corresponds to n°13
+* "VRef5" corresponds to n°15
+* "Vref1" corresponds to n°18
+* "~B0" corresponds to n°21
+* "B2" corresponds to n°22
+* "B1" corresponds to n°23
+* "B0" corresponds to n°24
+*
+* MOS devices
+MN1 14 21 4 0 N1  W= 0.30U L= 0.10U
+MN2 0 22 11 0 N1  W= 0.20U L= 0.10U
+MN3 10 13 8 0 N1  W= 0.30U L= 0.10U
+MN4 9 23 8 0 N1  W= 0.30U L= 0.10U
+MN5 8 11 7 0 N1  W= 0.30U L= 0.10U
+MN6 7 22 5 0 N1  W= 0.30U L= 0.10U
+MN7 5 13 6 0 N1  W= 0.30U L= 0.10U
+MN8 5 23 4 0 N1  W= 0.30U L= 0.10U
+MN9 15 24 6 0 N1  W= 0.30U L= 0.10U
+MN10 16 21 6 0 N1  W= 0.30U L= 0.10U
+MN11 17 21 9 0 N1  W= 0.30U L= 0.10U
+MN12 18 24 10 0 N1  W= 0.30U L= 0.10U
+MN13 0 21 10 0 N1  W= 0.30U L= 0.10U
+MN14 19 24 4 0 N1  W= 0.30U L= 0.10U
+MN15 20 24 9 0 N1  W= 0.30U L= 0.10U
+MN16 0 23 13 0 N1  W= 0.20U L= 0.10U
+MN17 0 24 21 0 N1  W= 0.20U L= 0.10U
+MP1 5 13 4 1 P1  W= 0.50U L= 0.10U
+MP2 5 23 6 1 P1  W= 0.50U L= 0.10U
+MP3 7 11 5 1 P1  W= 0.50U L= 0.10U
+MP4 8 22 7 1 P1  W= 0.50U L= 0.10U
+MP5 9 13 8 1 P1  W= 0.50U L= 0.10U
+MP6 10 23 8 1 P1  W= 0.50U L= 0.10U
+MP7 1 22 11 1 P1  W= 0.20U L= 0.10U
+MP8 1 23 13 1 P1  W= 0.20U L= 0.10U
+MP9 14 24 4 1 P1  W= 0.50U L= 0.10U
+MP10 15 21 6 1 P1  W= 0.50U L= 0.10U
+MP11 16 24 6 1 P1  W= 0.50U L= 0.10U
+MP12 17 24 9 1 P1  W= 0.50U L= 0.10U
+MP13 18 21 10 1 P1  W= 0.50U L= 0.10U
+MP14 0 24 10 1 P1  W= 0.50U L= 0.10U
+MP15 19 21 4 1 P1  W= 0.50U L= 0.10U
+MP16 20 21 9 1 P1  W= 0.50U L= 0.10U
+MP17 1 24 21 1 P1  W= 0.20U L= 0.10U
+*
+C3 1 0 19.737fF
+C4 4 0  1.803fF
+C5 5 0  1.638fF
+C6 6 0  1.872fF
+C7 7 0  1.150fF
+C8 8 0  1.727fF
+C9 9 0  1.815fF
+C10 10 0  1.719fF
+C11 11 0  1.103fF
+C13 13 0  1.476fF
+C14 14 0  0.672fF
+C15 15 0  0.670fF
+C16 16 0  0.670fF
+C17 17 0  0.671fF
+C18 18 0  0.671fF
+C19 19 0  0.647fF
+C20 20 0  0.667fF
+C21 21 0  1.695fF
+C22 22 0  0.684fF
+C23 23 0  1.010fF
+C24 24 0  0.416fF
+*
+* Extra RLC
+*
+Radd1 14 15 3120
+Radd2 19 1 1471
+Radd3 15 16 3080
+Radd4 20 17 3134
+Radd5 16 20 3107
+Radd6 19 14 2144
+Radd7 17 18 3134
+Radd8 18 0 2480
+*
+*
+* n-MOS BSIM4 :
+* low leakage
+.MODEL N1 NMOS LEVEL=14 VTHO=0.28 U0=0.060 TOXE= 1.2E-9 LINT=0.015U 
++K1 =0.450 K2=0.100 DVT0=2.300
++DVT1=0.570 LPE0=23.000e-9 ETA0=0.080
++NFACTOR=  0.9 U0=0.060 UA=3.400e-15
++WINT=0.005U LPE0=23.000e-9 
++KT1=-0.060 UTE=-1.800 VOFF=0.010
++XJ=0.150U NDEP=170.000e15 PCLM=1.100
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p
+*
+* p-MOS BSIM4:
+* low leakage
+.MODEL P1 PMOS LEVEL=14 VTHO=-0.32 U0=0.027 TOXE= 1.2E-9 LINT=0.015U 
++K1 =0.450 K2=0.100 DVT0=2.300
++DVT1=0.570 LPE0=23.000e-9 ETA0=0.080
++NFACTOR=  1.9 U0=0.027 UA=2.200e-15
++WINT=0.005U LPE0=23.000e-9 
++KT1=-0.060 UTE=-1.800 VOFF=0.010
++XJ=0.150U NDEP=170.000e15 PCLM=0.700
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p
+*
+* Transient analysis
+*
+* (Winspice)
+.options temp=27.0
+.control
+tran 0.1N 100.00N
+print  V(7) V(15) V(24) V(23) V(22) > out.txt
+plot  V(7) V(15) V(24) V(23) V(22)
+.endc
+.END

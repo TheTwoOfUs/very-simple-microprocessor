@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Microwind 3.1 - View menu</TITLE>
+<META NAME="Version" CONTENT="8.0.3429">
+<link rel="stylesheet" href="etienne.css" type="text/css">
+<META NAME="Date" CONTENT="08/12/05">
+</HEAD>
+<BODY class="basic">
+<b>
+<h1>View Menu</h1>
+</b>
+<br>
+  <h2><a name="new"></a>
+    </p> 
+    Refresh</h2>
+	  <blockquote>Redraws the layout.</blockquote>
+  <h2><a name="unselect"></a>Unselect All </h2>
+    <blockquote>Click on View -&gt; Unselect All (or &lt;ESC&gt;) to unselect the layout. This command is useful to draw the layout back into its default colors after commands such as View Interconnect or View Node which highlight one single node.</blockquote>
+  <h2><a name="view_all"></a>View All </h2>
+    <blockquote>Click View -&gt; View All to fit the screen with all the graphical elements currently on display. </blockquote>
+  <h2><a name="zoom"></a>Zoom In | Zoom Out</h2>
+    <blockquote>The above icons perform Zoom In and Zoom Out. When zooming in, the area determined by the mouse will be enlarged to fit the display window. When zooming out, the area determined by the mouse will contain the display window.  
+      If you click once, a zoom is performed at the desired location. 
+        <p>Press Ctrl+A for &quot; View All &quot;, and Ctrl+o for zoom out. <br>
+      </p>
+    </blockquote>
+  <h2><a name="view_node"></a>View Electrical Node </h2>
+    <blockquote>
+      <p>Click on the &quot;View Node&quot; icon or on View -&gt;View Node. Then, click in the desired box in the layout. After an extraction procedure has been carried out, you will see that all the boxes connected to that node. In the case of a large layout, the command may take time. The associated parasitic capacitance, the list of text labels added to the selected boxes, and the node properties are also displayed in a separate navigator window. Click &quot;Unselect&quot;, &quot;Hide&quot;, &lt;Escape&gt; or View -&gt; Unselect All to unselect the layout. </p>
+      
+      </blockquote>
+      <h2><a name="interco"></a>View Interconnect </h2>
+      <blockquote>Click on the &quot;View -&gt; View Interconnect &quot; and click in the desired box in the layout. A partial extraction procedure is carried out. At the end, you will see  all the metal boxes connected to that node. This command is fast even in the case of a large layout. However, the extraction only concerns metal layers. The full extraction is performed by the command &quot;View Electrical Node&quot;. Click &quot;Unselect&quot;, &quot;Hide&quot;, &lt;Escape&gt; or View -&gt; Unselect All to unselect the layout. </blockquote>
+      <p></p>
+</blockquote>
+  <h2><a name="lambda"></a>Lambda Grid</h2>
+    <blockquote>
+      <p>A lambda grid appears in the editing window by default. Depending on the scale, the grid is drawn for 1, 5, 10, 50, etc.. lambda integer value. The correspondance between the grid and the micron is given in the left upper corner of the drawing window. You may remove the lambda grid using this command.</p>
+    </blockquote>
+  <h2><a name="routing"></a>Routing Grid</h2>
+      <blockquote>The routing grid appears in the editing window. Depending on the design rule file, the grid is drawn each 8 to 15 lambda  value. The routing grid in 65nm technology is 8 lambda. The routing grid is used by the compiler to place MOS devices and rout interconnects between MOS gate, source and drain. You may remove the routing grid using the same command.</blockquote>
+      <h2><a name="mos_list"></a>Mos List </h2>
+    <blockquote>
+      <p>Click &quot;View -&gt; MOS List&quot; to get the list of n-channel and p-channel MOS devices currently edited in the layout. The MOS list is displayed in the navigator window. Click the desired MOS in the list to zoom at the corresponding location in the layout.</p>
+    </blockquote>
+	  <h2><a name="label_list"></a>Label List </h2>
+      <blockquote>
+        <p>Click &quot;View -&gt; Label List&quot; to get the list of labels currently edited in the layout. The label list is displayed in the navigator window. Click the desired label in the list to zoom at the corresponding location in the layout.  Its properties appear in the navigator menu. </p>
+        <p align="left">&#149;&nbsp; Click on Hide to close the navigator window. </p>
+        <p align="left">&#149;&nbsp; Click on Extract to add the electrical properties of the selected text if the layout has not been previously extracted. </p>
+        <p>In the case of a very long text list, select the first letter of the text at hand, press that letter on the keyboard. This will automatically effect and alphabetic research and the selector will move to the first label starting with the selected letter. </p>
+      </blockquote>
+  </blockquote>
+      <h2><a name="navigator"></a>Navigator window</h2>
+    <blockquote>
+      <p><img src="navigator.gif" width="301" height="388"></p>
+    </blockquote>
+	  <h2><a name="zoom_window"></a>Zoom window</h2>
+	  <blockquote>
+	    <p>The Zoom window displays the layout under construction. Draw a rectangle in the Zoom window to pilot the zoom command for the main editing window of Microwind3.1. For example, drawing a small rectangle at the upper left part of the Zoom window will induce the redrawing of the main layout window at the desired location. </p>
+	    <p><img src="zoom.GIF" width="174" height="415"></p>
+      </blockquote>
+      </blockquote>
+  <h2><a name="palette"></a>Palette of Layers</h2>
+    <blockquote>The palette is located on the right side of the screen. A little tick indicates the current layer. The selected layer by default is a polysilicon (PO). The layers at the cursor location are underlined.
+      <p>If you remove the tick on the right side of the layer, the layer is switched to protected mode. The Cut, Stretch and Copy commands no longer affect that layer. <br>
+        Use &quot;View-&gt;Protect all&quot; to protect all layers. The ticks are erased. <br>
+        Use &quot;View-&gt;Unprotect all&quot; to remove the protection. All layers can be edited. <br>
+      </p>
+<img src="palette.gif" width="500" height="384"></blockquote>
+  <P><A HREF="index.htm">Back</A></P>
+</BODY>
+</HTML>

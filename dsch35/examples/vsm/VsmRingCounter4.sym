@@ -1,0 +1,39 @@
+USER SYMBOL by DSCH Ver 3.0
+DATE 23/12/2004 16:00:53
+SYM  #VsmRingCounter4
+BB(0,0,40,50)
+TITLE 10 -2  #VsmRingCounter4
+MODEL 6000
+REC(5,5,30,40)
+PIN(0,20,0.00,0.00)invClear
+PIN(0,10,0.00,0.00)Phase_Count
+PIN(40,40,2.00,1.00)Phase0
+PIN(40,30,2.00,1.00)Phase1
+PIN(40,20,2.00,1.00)Phase2
+PIN(40,10,2.00,1.00)Phase3
+LIG(0,20,5,20)
+LIG(0,10,5,10)
+LIG(35,40,40,40)
+LIG(35,30,40,30)
+LIG(35,20,40,20)
+LIG(35,10,40,10)
+LIG(5,5,5,45)
+LIG(5,5,35,5)
+LIG(35,5,35,45)
+LIG(35,45,5,45)
+VLG module VsmRingCounter4( invClear,Phase_Count,Phase0,Phase1,Phase2,Phase3);
+VLG  input invClear,Phase_Count;
+VLG  output Phase0,Phase1,Phase2,Phase3;
+VLG  wire w3,w4,w6,w8,w9,w11,w12,w14;
+VLG  wire w15,;
+VLG  xor #(16) xor2_1(Phase2,w3,w4);
+VLG  xor #(16) xor2_2(Phase1,w6,w3);
+VLG  dreg #(19) dreg7_3(w6,w11,w8,w9,Phase_Count);
+VLG  dreg #(19) dreg8_4(w12,w8,w4,w9,Phase_Count);
+VLG  dreg #(12) dreg9_5(w4,w14,w3,w9,Phase_Count);
+VLG  dreg #(12) dreg10_6(w3,w15,w6,w9,Phase_Count);
+VLG  not #(31) inv_7(w9,invClear);
+VLG  xor #(16) xor2_8(Phase3,w4,w12);
+VLG  xor #(16) xor2_9(Phase0,w12,w11);
+VLG endmodule
+FSYM

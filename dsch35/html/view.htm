@@ -1,0 +1,325 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>DSCH version 3.1 - View menu</TITLE>
+<META NAME="Version" CONTENT="8.0.3429">
+<link rel="stylesheet" href="etienne.css" type="text/css">
+<META NAME="Date" CONTENT="08/12/05">
+</HEAD>
+<BODY class="basic">
+<b>
+<h1>View Menu</h1>
+</b>
+<br>
+  <h2><a name="unselect"></a>Unselect</h2>
+	  <blockquote>Click &lt;ESC&gt; to unselect the design. This command is useful to redraw the schematic diagram after commands such as View Node which highlight one single node.</blockquote>
+      <h2><a name="all"></a>View All </h2>
+    <blockquote>
+      <p>Click <strong>View -&gt; View All </strong>to fit the screen with all the graphical elements currently on display. </p>
+    </blockquote>
+    <h2><a name="same"></a>View Same </h2>
+    <blockquote>
+      <p>Draw again the schematic diagram without changing the scale. Used to refresh the screen.</SPAN></p>
+    </blockquote>
+    <h2><a name="zoom"></a>Zoom In | Zoom Out</h2>
+    <blockquote>The above icons perform <strong>Zoom In</strong> and <strong>Zoom Ou</strong>t. When zooming in, the area determined by the mouse will be enlarged to fit the display window. When zooming out, the area determined by the mouse will contain the display window.  
+      If you click once, a zoom is performed at the desired location. 
+        <p>Press Ctrl+A for &quot; View All &quot;, and Ctrl+o for zoom out. <br>
+      </p>
+</blockquote>
+  <h2><a name="net"></a>View Electrical Net </h2>
+    <blockquote>
+      <p>Click on the icon &quot;Electrical Net&quot; or on <strong>View -&gt; Electrical Net</strong>. Then, click in the desired interconnect or pin in the schematic diagram. After an extraction procedure has been carried out, you will see that all the wires connected to that node. Click &lt;Escape&gt; or <strong>View -&gt; Unselect Al</strong>l to unselect the diagram.
+</p>
+</blockquote>
+    <h2><a name="lib"></a>Symbol Library</h2>
+<blockquote>
+      <p>The symbol library contains basic electrical symbols. Most standard  symbols (R,L,C, OpAmp, diode, transmission lines) are part of thesymbol menu. Sources, probes and switches are also proposed. Some more symbols may be found in the IEEE directory, accessible through the command <strong>Insert -&gt; User Symbol</strong>.
+      </p>
+      <h3><a name="basic"></a>Basic Menu </h3>
+      <table width="542" border="1" class="basic">
+        <tr>
+          <td><em>Element</em></td>
+          <td><em>Description</em></td>
+          <td><em>Symbol name </em></td>
+        </tr>
+        <tr>
+          <td>Button</td>
+          <td>On/Off button </td>
+          <td>button.sym</td>
+        </tr>
+        <tr>
+          <td>Ground</td>
+          <td>Ground connection equal to &quot;0&quot; </td>
+          <td>vss.sym</td>
+        </tr>
+        <tr>
+          <td>Supply</td>
+          <td>Logic value equal to &quot;1&quot; </td>
+          <td>vdd.sym</td>
+        </tr>
+        <tr>
+          <td>Clock</td>
+          <td>0/1 generator </td>
+          <td>clock.sym</td>
+        </tr>
+        <tr>
+          <td>Led</td>
+          <td>Logic probe (1=red by default, 0=black), with programmable color </td>
+          <td>light.sym</td>
+        </tr>
+        <tr>
+          <td>Hexadecimal display</td>
+          <td>Displays four logic values as an hexadecimal numer, with programmable color and format (Unsigned, signed, integer, fixed point). The gray color is used when one or more pins is not connected </td>
+          <td>digit.sym</td>
+        </tr>
+        <tr>
+          <td>Inv</td>
+          <td>Logic inverter</td>
+          <td>not.sym</td>
+        </tr>
+        <tr>
+          <td>3-state Inv</td>
+          <td>3-state inverter. Neads enable=1 to generate the inverted output, otherwise 3-state output </td>
+          <td>notif1.sym</td>
+        </tr>
+        <tr>
+          <td>2-input AND </td>
+          <td>2 input and gate </td>
+          <td>and2.sym</td>
+        </tr>
+        <tr>
+          <td>3-input AND </td>
+          <td>3 input and gate </td>
+          <td>and3.sym</td>
+        </tr>
+        <tr>
+          <td>Hexadecimal keyboard </td>
+          <td>Generates four logic values as an hexadecimal from a 16-key keyboard, with programmable color. </td>
+          <td>kbd.sym</td>
+        </tr>
+        <tr>
+          <td>2-input NAND </td>
+          <td>2 input NAND gate </td>
+          <td>nand2.sym</td>
+        </tr>
+        <tr>
+          <td>3-input NAND </td>
+          <td>3 input NAND gate </td>
+          <td>nand3.sym</td>
+        </tr>
+        <tr>
+          <td>2-input OR </td>
+          <td>2 input OR gate </td>
+          <td>or2.sym</td>
+        </tr>
+        <tr>
+          <td>2-input NOR </td>
+          <td>2 input NOR gate </td>
+          <td>nor2.sym</td>
+        </tr>
+        <tr>
+          <td>3-input NOR </td>
+          <td>3 input NOR gate </td>
+          <td>nor3.sym</td>
+        </tr>
+        <tr>
+          <td>3-input OR </td>
+          <td>3 input OR gate </td>
+          <td>or3.sym</td>
+        </tr>
+        <tr>
+          <td>2-input XOR </td>
+          <td>2 input XOR gate </td>
+          <td>xor2.sym</td>
+        </tr>
+        <tr>
+          <td>3-input XNOR </td>
+          <td>3 input XNOR gate </td>
+          <td>xnor2.sym</td>
+        </tr>
+        <tr>
+          <td>D-Flip flop</td>
+          <td>Fall edge-sensitive flip flop. Copies the input information D on Q at a fall level of the clock.  </td>
+          <td>dreg.sym</td>
+        </tr>
+        <tr>
+          <td>nMOS</td>
+          <td>N-channel MOS device. Uses &quot;spice.lib&quot; where the MOS parameters can be described and modified. Use &quot;nmos4.sym&quot; to have access to the 4 terminations of the device. The logic signal is always transferred from the source to the drain.</td>
+          <td>nmos.sym</td>
+        </tr>
+        <tr>
+          <td>pMOS</td>
+          <td>P-channel MOS device. Uses &quot;spice.lib&quot; where the MOS parameters can be described and modified. Use &quot;pmos4.sym&quot; to have access to the 4 terminations of the device. The logic signal is always transferred from the source to the drain.</td>
+          <td>pmos.sym</td>
+        </tr>
+        <tr>
+          <td>Latch</td>
+          <td>D-latch, copies the input information D on Q at a high level of the clock. </td>
+          <td>latch.sym</td>
+        </tr>
+        <tr>
+          <td>3-input complex gate </td>
+          <td>3-input complex gate, with a logic behavior described in VERILOG </td>
+          <td>complex3.sym</td>
+        </tr>
+        <tr>
+          <td>5-input complex gate </td>
+          <td>5-input complex gate, with a logic behavior described in VERILOG </td>
+          <td>complex5.sym</td>
+        </tr>
+        <tr>
+          <td>Memory 8x8 bit </td>
+          <td>8x8 bit memory </td>
+          <td>mem8x8.sym</td>
+        </tr>
+	  </table>
+	  <p><img src="symbols.GIF" width="617" height="446"></p>
+	  <h3>&nbsp;</h3>
+	  <h3><a name="advanced"></a>Advanced Menu </h3>
+	 
+		<table width="542" border="1" class="basic">
+          <tr>
+            <td><em>Element</em></td>
+            <td><em>Description</em></td>
+            <td><em>Symbol name </em></td>
+          </tr>
+          <tr>
+            <td>Resistor</td>
+            <td>Resistor between two nodes, in Ohm </td>
+            <td>res.sym</td>
+          </tr>
+          <tr>
+            <td>Capacitor</td>
+            <td>Capacitor between two nodes , in Farad </td>
+            <td>capa.sym</td>
+          </tr>
+          <tr>
+            <td>Inductance</td>
+            <td>Inductance between two nodes , in Henry </td>
+            <td>self.sym</td>
+          </tr>
+          <tr>
+            <td>OpAmp</td>
+            <td>Operationnal amplifier, with programmable gain </td>
+            <td>aop.sym</td>
+          </tr>
+          <tr>
+            <td>Diode</td>
+            <td>Diode, with a model provided in &quot;spice.lib&quot; </td>
+            <td>diode.sym</td>
+          </tr>
+          <tr>
+            <td>T-Line</td>
+            <td>Transmission line, with user-accessible T0, Z0, or delay parameters</td>
+            <td>tline.sym</td>
+          </tr>
+          <tr>
+            <td>PWL</td>
+            <td>Piece-Wise-Linear source, that generates 0-1 series with a user-defined time intervall for each logic value. </td>
+            <td>pwl.sym</td>
+          </tr>
+          <tr>
+            <td>V-source</td>
+            <td>Voltage source, used for SPICE generation. </td>
+            <td>vsource.sym</td>
+          </tr>
+          <tr>
+            <td>I-source</td>
+            <td>Current source, used for SPICE generation. </td>
+            <td>isource.sym</td>
+          </tr>
+          <tr>
+            <td>8-bit Display </td>
+            <td>Displays 8 logic values as an hexadecimal numer, with programmable color and format (Unsigned, signed, integer, fixed point). The gray color is used when one or more pins is not connected </td>
+            <td>display.sym</td>
+          </tr>
+          <tr>
+            <td>I/O Pad </td>
+            <td>I/O pad symbol to represent the integrated circuit interface to the external world. Used to declare a schematic diagram I/O when creating a user-symbol. </td>
+            <td>pad.sym</td>
+          </tr>
+          <tr>
+            <td>I/O</td>
+            <td>I/O  symbol used to declare a schematic diagram I/O when creating a user-symbol. </td>
+            <td>io.sym</td>
+          </tr>
+          <tr>
+            <td>PIP</td>
+            <td>Programmable Interconnect Point, used for the illustration of FPGA structure. </td>
+            <td>pip.sym</td>
+          </tr>
+          <tr>
+            <td>Matrix</td>
+            <td>Matrix of programmable Interconnect Point, used for the illustration of FPGA structure. </td>
+            <td>matrix.sym</td>
+          </tr>
+          <tr>
+            <td>MUX</td>
+            <td>2-input logic multiplexor</td>
+            <td>mux.sym</td>
+          </tr>
+          <tr>
+            <td>LUT</td>
+            <td>Look-up-table</td>
+            <td>lut.sym</td>
+          </tr>
+          <tr>
+            <td>On/Off</td>
+            <td>Graphic switch. Can appear with two states: on and off. </td>
+            <td>onoff.sym</td>
+          </tr>
+          <tr>
+            <td>Transmission gate </td>
+            <td>Logic transmission gate. Enables the signal to flow on a high level of the control &quot;EN&quot; </td>
+            <td>tgate.sym</td>
+          </tr>
+          <tr>
+            <td>Box</td>
+            <td>Used to highlight one part of the schematic diagram, with programmable width and height </td>
+            <td>box.sym</td>
+          </tr>
+          <tr>
+            <td>Arrow</td>
+            <td>Graphic arrow. Serves as an electrical connection for all arrows with the same name. Also serves as an I/O declaration when creating a user-symbol. </td>
+            <td>arrow.sym</td>
+          </tr>
+          <tr>
+            <td>Information</td>
+            <td>Displays a user-defined information at a given value of the logic node </td>
+            <td>probe.sym</td>
+          </tr>
+        </table>
+</blockquote>
+  <p><img src="symbols2.GIF" width="611" height="430">    <h2><a name="list"></a>List of Symbols </p></h2>
+    <blockquote>
+      <p><span class="MsoNormal">The command gives the complete netlist corresponding to the schematic diagram. The internal structure of hierarchical symbols also appears. The symbol name, list of pins, related node numbers and model number are listed.</span></span></p>
+      <p><img src="listofsymbols.GIF" width="700" height="510"></p>
+</blockquote>
+    <p>&nbsp; </p>
+    <h2><a name="hierarchy"></a>Design Hierarchy
+      <p></p>
+    </h2>
+    <blockquote>
+      <p><span class="basic">The design hierarchy command gives an interesting insight in the hierarchical structure of symbols, together with the list of input and output symbols.</span></span></p>
+      <p><img src="designhierarchy.GIF" width="700" height="510"></p>
+    </blockquote>
+    <h2><a name="timing"></a>Timing Diagram </h2>
+    <blockquote>
+      <p class="MsoNormal">The timing diagram gives the time-domain aspect of all input and output nodes. You may zoom on a specific time window, add the evaluation of the consumed current, and get the exact value of each input/output at a desired location.</span></p>
+      <p class="MsoNormal"><img src="timingdiagram.GIF" width="787" height="381"></p>
+    </blockquote>
+    <h2><a name="symbol"></a>Symbol Library </h2>
+    <blockquote>The symbol library contains basic logic and electrical symbols, sources, displays and switches. Most standard logic symbols (Inverter, Buffer, NAND, AND, NOR, OR, XOR) and D-latches are part of the &quot;<a href="#basic">Basic</a>&quot; symbol menu. The analog components such as resistor, inductor, capacitor, operational amplifiers are reported in the &quot;<a href="#advanced">Advanced</a>
+	&quot; menu. Notice several input/output symbols, as well as a variety of switches for programmable arrays. Some more symbols may be found in the IEEE directory, accessible through the command <b>Insert -> User Symbol.</b></span><b>
+	
+      <p>&nbsp;</p>
+    </blockquote>
+    <h2><a name="unselect"></a>Unselect All </h2>
+    <blockquote>Use the command (<strong>View -&gt; Unselect All</strong>) to cancel undesired commands, or to redraw the complete schematic diagram.
+      
+    </blockquote>
+  
+    <P><A HREF="index.htm">Back</A></P>
+</BODY>
+</HTML>

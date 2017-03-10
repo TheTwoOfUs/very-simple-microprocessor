@@ -1,0 +1,68 @@
+USER SYMBOL by DSCH Ver 3.0
+DATE 22/12/2004 18:25:05
+SYM  #VsmArithmeticUnit2
+BB(0,0,40,100)
+TITLE 10 -2  #VsmArithmeticUnit2
+MODEL 6000
+REC(5,5,30,90)
+PIN(0,60,0.00,0.00)B
+PIN(0,70,0.00,0.00)B1
+PIN(0,80,0.00,0.00)B2
+PIN(0,90,0.00,0.00)B3
+PIN(0,10,0.00,0.00)A
+PIN(0,20,0.00,0.00)A1
+PIN(0,30,0.00,0.00)A2
+PIN(0,40,0.00,0.00)A3
+PIN(0,50,0.00,0.00)AddSub
+PIN(40,20,2.00,1.00)Res
+PIN(40,30,2.00,1.00)Res1
+PIN(40,40,2.00,1.00)Res2
+PIN(40,50,2.00,1.00)Res3
+PIN(40,10,2.00,1.00)Carry
+LIG(0,60,5,60)
+LIG(0,70,5,70)
+LIG(0,80,5,80)
+LIG(0,90,5,90)
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(0,30,5,30)
+LIG(0,40,5,40)
+LIG(0,50,5,50)
+LIG(35,20,40,20)
+LIG(35,30,40,30)
+LIG(35,40,40,40)
+LIG(35,50,40,50)
+LIG(35,10,40,10)
+LIG(5,5,5,95)
+LIG(5,5,35,5)
+LIG(35,5,35,95)
+LIG(35,95,5,95)
+VLG module VsmArithmeticUnit( B,B1,B2,B3,A,A1,A2,A3,
+VLG  AddSub,Res,Res1,Res2,Res3,Carry);
+VLG  input B,B1,B2,B3,A,A1,A2,A3;
+VLG  input AddSub;
+VLG  output Res,Res1,Res2,Res3,Carry;
+VLG  wire w29,w30,w31,w32;
+VLG  mux #(24) mux_1(w19,A2,w17,AddSub);
+VLG  not #(10) inv_2(w17,A2);
+VLG  mux #(24) mux_3(w11,A,w20,AddSub);
+VLG  mux #(3) mux_4(w23,A3,w22,AddSub);
+VLG  not #(10) inv_5(w22,A3);
+VLG  not #(10) inv_6(w24,A1);
+VLG  mux #(24) mux_7(w25,A1,w24,AddSub);
+VLG  not #(10) inv_8(w20,A);
+VLG  mux #(17) mux_9(w10,vss,vdd,AddSub);
+VLG  xor #(15) xor2_1_10(w29,B,w11);
+VLG  assign w12=(B&w11)|(w10&(B|w11))
+VLG  xor #(15) xor2_2_11(Res3,w29,w10);
+VLG  xor #(15) xor2_1_12(w30,B3,w27);
+VLG  assign Carry=(B3&w27)|(w26&(B3|w27))
+VLG  xor #(15) xor2_2_13(Res,w30,w26);
+VLG  xor #(15) xor2_1_14(w31,B1,w25);
+VLG  assign w28=(B1&w25)|(w12&(B1|w25))
+VLG  xor #(15) xor2_2_15(Res2,w31,w12);
+VLG  xor #(15) xor2_1_16(w32,B2,w19);
+VLG  assign w26=(B2&w19)|(w28&(B2|w19))
+VLG  xor #(15) xor2_2_17(Res1,w32,w28);
+VLG endmodule
+FSYM

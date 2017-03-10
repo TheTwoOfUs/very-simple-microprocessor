@@ -1,0 +1,30 @@
+VERSION 18/07/2006 18:24:41
+FIG #D:\Documents and Settings\sicard\Mes documents\microwind31\examples\MOSn.MSK
+BB(4,9,49,35)
+SIMU #10.00
+REC(23,11,26,24,OP,1)
+REC(37,18,5,10,DN)
+REC(30,18,5,10,DN)
+REC(11,18,5,10,DN)
+REC(4,18,5,10,DN)
+REC(31,19,2,2,CO)
+REC(31,25,2,2,CO)
+REC(5,25,2,2,CO)
+REC(39,19,2,2,CO)
+REC(13,25,2,2,CO)
+REC(13,19,2,2,CO)
+REC(5,19,2,2,CO)
+REC(39,25,2,2,CO)
+REC(35,15,2,16,PO)
+REC(9,15,2,16,PO)
+REC(4,14,4,14,ME)
+REC(38,18,4,14,ME)
+REC(12,18,4,14,ME)
+REC(30,14,4,14,ME)
+REC(9,18,2,10,DN)
+REC(35,18,2,10,DN)
+TITLE 6 11  #Low leakage
+$- 1000 0 
+TITLE 31 9  #High speed (using option layer)
+$- 1000 0 
+FFIG D:\Documents and Settings\sicard\Mes documents\microwind31\examples\MOSn.MSK

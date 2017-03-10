@@ -1,0 +1,76 @@
+USER SYMBOL by DSCH Ver 3.0
+DATE 23/12/2004 11:43:00
+SYM  #VsmArithmeticUnit
+BB(0,0,40,110)
+TITLE 10 -2  #VsmArithmeticUnit
+MODEL 6000
+REC(5,5,30,100)
+PIN(0,50,0.00,0.00)B0
+PIN(0,40,0.00,0.00)B1
+PIN(0,30,0.00,0.00)B2
+PIN(0,20,0.00,0.00)B3
+PIN(0,100,0.00,0.00)A0
+PIN(0,90,0.00,0.00)A1
+PIN(0,80,0.00,0.00)A2
+PIN(0,70,0.00,0.00)A3
+PIN(0,60,0.00,0.00)AddSub
+PIN(0,10,0.00,0.00)EnableAlu
+PIN(40,10,2.00,1.00)IB_Alu3
+PIN(40,20,2.00,1.00)IB_Alu2
+PIN(40,30,2.00,1.00)IB_Alu1
+PIN(40,40,2.00,1.00)IB_Alu0
+PIN(40,50,2.00,1.00)Carry
+LIG(0,50,5,50)
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(0,20,5,20)
+LIG(0,100,5,100)
+LIG(0,90,5,90)
+LIG(0,80,5,80)
+LIG(0,70,5,70)
+LIG(0,60,5,60)
+LIG(0,10,5,10)
+LIG(35,10,40,10)
+LIG(35,20,40,20)
+LIG(35,30,40,30)
+LIG(35,40,40,40)
+LIG(35,50,40,50)
+LIG(5,5,5,105)
+LIG(5,5,35,5)
+LIG(35,5,35,105)
+LIG(35,105,5,105)
+VLG module VsmArithmeticUnit( B0,B1,B2,B3,A0,A1,A2,A3,
+VLG  AddSub,EnableAlu,IB_Alu3,IB_Alu2,IB_Alu1,IB_Alu0,Carry);
+VLG  input B0,B1,B2,B3,A0,A1,A2,A3;
+VLG  input AddSub,EnableAlu;
+VLG  output IB_Alu3,IB_Alu2,IB_Alu1,IB_Alu0,Carry;
+VLG  wire w10,w11,w12,w13,w18,w20,w21,w23;
+VLG  wire w24,w25,w26,w27,w28,w29,w30,w31;
+VLG  wire w33,w34,w35,w36;
+VLG  mux #(24) mux_1(w20,A2,w18,AddSub);
+VLG  not #(10) inv_2(w18,A2);
+VLG  mux #(24) mux_3(w11,A0,w21,AddSub);
+VLG  mux #(24) mux_4(w24,A3,w23,AddSub);
+VLG  not #(10) inv_5(w23,A3);
+VLG  not #(10) inv_6(w25,A1);
+VLG  mux #(24) mux_7(w26,A1,w25,AddSub);
+VLG  not #(10) inv_8(w21,A0);
+VLG  mux #(17) mux_9(w10,vss,vdd,AddSub);
+VLG  bufif1 #(10) bufif1_10(IB_Alu3,w28,EnableAlu);
+VLG  bufif1 #(10) bufif1_11(IB_Alu2,w31,EnableAlu);
+VLG  bufif1 #(10) bufif1_12(IB_Alu1,w30,EnableAlu);
+VLG  bufif1 #(10) bufif1_13(IB_Alu0,w13,EnableAlu);
+VLG  xor #(15) xor2_1_14(w33,B0,w11);
+VLG  assign w12=(B0&w11)|(w10&(B0|w11))
+VLG  xor #(15) xor2_2_15(w13,w33,w10);
+VLG  xor #(15) xor2_1_16(w34,B3,w24);
+VLG  assign Carry=(B3&w24)|(w27&(B3|w24))
+VLG  xor #(15) xor2_2_17(w28,w34,w27);
+VLG  xor #(15) xor2_1_18(w35,B1,w26);
+VLG  assign w29=(B1&w26)|(w12&(B1|w26))
+VLG  xor #(15) xor2_2_19(w30,w35,w12);
+VLG  xor #(15) xor2_1_20(w36,B2,w20);
+VLG  assign w27=(B2&w20)|(w29&(B2|w20))
+VLG  xor #(15) xor2_2_21(w31,w36,w29);
+VLG endmodule
+FSYM

@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>DSCH 3.1 - Edit menu</TITLE>
+<META NAME="Version" CONTENT="8.0.3429">
+<link rel="stylesheet" href="etienne.css" type="text/css">
+<META NAME="Date" CONTENT="08/12/05">
+</HEAD>
+<BODY class="basic">
+<b>
+<h1>Edit Menu</h1>
+</b>
+<br>
+  <h2><a name="undo"></a>Undo</h2>
+  <blockquote>
+    <p>The Undo command (<strong>Edit -&gt; Undo</strong>) is useful to not take into account the last editing command. It is possible to undo the commands Cut, Paste, Copy, Move, Stretch and Edit.</p>
+    <p></p>
+</blockquote>
+<h2><a name="cut"></a>Cut</h2>
+<blockquote>
+    <p>Click on the <I>Cut</I> icon. Move the cursor to the design window, and delimit the active area with the mouse. Consequently, all the graphics included in this area are erased. Click on <B>Undo</B> to fix those elements back into the design.</p>
+    <ul>
+      <li>One single symbol can be erased by a click inside its layout when the cut command is active.</li>
+      <li>One single interconnect can be erased by a click on its wire when the cut command is active.</li>
+    </ul>
+</blockquote>
+    <h2><a name="copy"></a>Copy</h2>
+	<blockquote>
+    <p>Click on the <strong>Copy icon</strong>. Move the cursor to the design window, and delimit the active area with the mouse. Consequently, all the graphics included in this area are copied. The external shape of the copied elements appears. Fix those copied elements at the desired location by a click on the mouse. </p>
+    <p>Click on Undo to cancel the copy command.<br>
+    </p>
+</blockquote>
+    <h2><a name="paste"></a>Paste</h2>
+	<blockquote>
+    <p>All the graphics previously deleted or copies may be fixed again on the layout at the desired location by a click on the mouse. </p>
+</blockquote>
+    <h2><a name="move"></a>Move</h2>
+	<blockquote>
+    <p>To move one graphical element, click on the "Move" icon or <B>"Edit -&gt; Move"</B>. Then using the mouse, draw an area that includes the elements. Then, drag the mouse to the new location and release the mouse. As a result, the elements are moved the new place. </p>
+    <UL>
+      <LI>One single line can be moved or stretched (depending where you click) by a direct click on the line. 
+      <LI>One single text can be moved by a direct click on the text location. </LI>
+    </UL>
+</blockquote>
+    <blockquote>
+      <p></p>
+    </blockquote>
+    <h2><a name="flip"></a>Flip Horizontal and Vertical </h2>
+	<blockquote>
+    <p>To apply a flip to one part of the design, click on <B>Edit -&gt; Flip.</B> Then, delimit the area inside which the elements will be changed. </p>
+</blockquote>
+    <h2><a name="rotate"></a>Rotate</h2>
+	<blockquote>
+    <p>To apply a rotation to one part of the design, click on <B>Edit -&gt; Rotate. </B>Select one of the proposed action:</p>
+    <UL>
+      <LI>Rotate right or 90&deg;
+      <LI>Rotate left or -90&deg;</LI>
+    </UL>
+    <P>Then, delimit the area inside which the elements will be rotated.</P>
+</blockquote>
+    <h2><a name="line"></a>Line</h2>
+	<blockquote>
+    <p>The "&nbsp;Line&nbsp;" icon is the default icon. It creates an interconnection between two points in the schematic diagram. If the "&nbsp;Line&nbsp;" icon is not selected, click on it. Then, move the cursor to the display window and fix the start point of the interconnect with a press of the mouse. Keep pressed and drag the mouse to the interconnect end. Release the mouse and see how the line is created.</p>
+    </blockquote>
+<h2><a name="connect"></a>Connect</h2>
+    <blockquote>
+      <p>Use the "Connect " icon to create the electrical contact between crossing interconnects.</p>
+    </blockquote>
+<h2><a name="text"></a>Text</h2>
+    <blockquote>
+      <p>Text is added for information only. It has no impact on simulation. Text is usefull to add comments on the schematic diagram, add more information or specific I/Os or nodes. </p>
+      <p>Note that text starting with &quot;.&quot; is usually considered as a simulation command. For example: &quot;.TRAN 0.1NS 100NS&quot; is a text that is also considered as a SPICE control to configure the transient simulation. </p>
+      <table width="413" border="1" class="basic">
+        <tr>
+          <td width="61">Keyword</td>
+          <td width="63">Used for </td>
+          <td width="275">Example</td>
+        </tr>
+        <tr>
+          <td>.TRAN</td>
+          <td>transient simulation </td>
+          <td>.TRAN 0.1NS 100NS </td>
+        </tr>
+        <tr>
+          <td>.DC</td>
+          <td>dc simulation</td>
+          <td>.DC Vin 0 5 0.1 </td>
+        </tr>
+        <tr>
+          <td>.AC</td>
+          <td>AC simulation </td>
+          <td>.AC DEC 10 1MEG 1G </td>
+        </tr>
+        <tr>
+          <td height="41">Kxxx</td>
+          <td>Inductance coupling </td>
+          <td>K2 Ltem2 Lvdd 0.002</td>
+        </tr>
+        <tr>
+          <td>.OPT</td>
+          <td>WinSpice option </td>
+          <td>.OPT RELTOL=1e-6</td>
+        </tr>
+      </table>
+</blockquote>
+      <p><A HREF="index.htm">Back</A></p>
+   
+    </BODY>
+</HTML>

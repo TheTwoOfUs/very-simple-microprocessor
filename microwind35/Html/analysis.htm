@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Microwind 3.1 - Analysis menu</TITLE>
+<META NAME="Version" CONTENT="8.0.3429">
+<link rel="stylesheet" href="etienne.css" type="text/css">
+<META NAME="Date" CONTENT="08/12/05">
+</HEAD>
+<BODY class="basic">
+<b>
+<h1>Analysis Menu</h1>
+</b>
+<br>
+  <h2><a name="run"></a>Design Rule Checker</h2>
+  <blockquote>
+    <p>The design rule checker (DRC) scans all the design and verifies that all the minimum design rules are respected. Click on the icon above or on <B>Analysis -&gt;Design Rule Checker</B> to run the DRC. The errors are highlighted in the display window, with an appropriate message giving the nature of the error. Details about the position and type of the errors appear on the screen. To obtain more information about the design rules, click Help -&gt; Design Rules, or the user's manual.</p>
+  </blockquote>
+    <h2><a name="floating"></a>Find Floating Nodes</h2>
+    <blockquote>
+      <p>The command <B>Analysis -&gt;Find Floating Nodes </B> helps to locate and highlight portions of layout which have no connection to active parts such as N+ of P+ diffusion. The list of floating nodes appears in the navigator menu as labels starting with letter &quot;N&quot; followed by a number. Click on the label to zoom at the corresponding location in the layout. Floating layout should be removed or connected to N+/P+ diffusion.</p>
+    </blockquote>
+    <h2><a name="parametric"></a>Parametric Analysis</h2>
+<blockquote>
+  <p>The parametric analysis within Microwind is a powerful tool for rapid investigation of the effect of some parameter variation on the behavior of the circuit. An example of analysis may be the effect of the load capacitance on the delay of a gate. The parametric analyzer will increase automatically the capacitance, run a set of simulations and plot the result on the screen.</p>
+  <UL>
+    <LI>Click on <B>Analysis -&gt; Parametric Analysis</B>
+    <LI>Select the desired output node on which the delay measurement or frequency measurement is performed, then. Click on a cell output node in the layout. The parametric analysis window appears.    </LI>
+  </UL>
+  <p><img src="parametric.GIF" width="837" height="575"></p>
+  <UL>
+    <LI>In the parameter menu, choose for example the item "node capacitance". Give the appropriate range of analysis. 
+        <P></P>
+    </LI>
+    <LI>In the measurement menu you may choose to monitor the rise and fall delay, the power consumption, or the frequency.    </LI>
+  </UL>
+  <p>Click on "&nbsp;<B>Start Analysis</B>&nbsp;". An iterative procedure will conduct simulations and extract the relevant parameters. Example results may show the evolution of the cell delay when its output node capacitance has been changed, or the influence of temperature variations on the final value of a polarization voltage. </p>
+</blockquote>
+<h2><a name="distance"></a>Measure Distance</h2>
+<blockquote>
+  <p>The ruler gives the horizontal and vertical measurements (dx and dy) between two points, directly on the screen in lambda and in micron. The algebraic distance (d) is also given in &micro;m. The ruler is simply erased any command of the View menu (Like <B>View -&gt; Refresh ) </B>or by a press of<B> &lt;ESC&gt;.</B></p>
+</blockquote>
+<h2><a name="resonant"></a>Resonant Frequency </h2>
+<blockquote>
+  <p>Use this command to compute the resonant frequency and characteristic impedance of a couple of inductor and capacitor. The resonnant frequency is 2.pi.1/sqrt(L.C), the characteristic impedance is sqrt(L/C), where sqrt is the square root operator. Furthermore, the impedance of the inductor and capacitor is estimated at a given frequency.</p>
+</blockquote>
+<h2><a name="fem"></a>Interconnect Analysis with FEM</h2>
+<blockquote>
+  <p>Use this command to compute the R,L,C value of a given interconnect per unit length. The screen includes a Finite-Element Module that computes the electrical field between one or two conductors (Select the configuration using the four buttons on the right upper corner of the screen) and the ground plane.</p>
+  <P>The conductor section, height, thickness corresponds to the metal 1 layer. These parameters are configured by the RUL file (By default DEFAULT.RUL). You may change the values and see the effect of R,L and C.</P>
+  <P><img src="fem.GIF" width="751" height="556"></P>
+  <p>The capacitance is computed using Delorme formulations <SPAN 
+>(<I>Inductance and capacitance analytic formulas for VLSI interconnects, Electronic letters, vol 32, n&deg;11, pp 996-997, May 1996</I>). The plate capacitance (eps0. epsr.surface/distance) is also given. </SPAN>
+<SPAN>The <I>low K</I> parameters refers to the interlayer dielectric permittivity. <I>Cu</I> refers to copper material, while <I>Al</I> refers to aluminum.</SPAN></P>
+</blockquote>
+<h2><a name="global_ctk"></a>Global Crosstalk Analysis </h2>
+<blockquote>
+  <p>An evaluation of the crosstalk effect based on analytical approximations of the coupling amplitude is available using the command <strong>Analysis </strong><strong>-&gt;Global Crosstalk analysis </strong> to access to this command. The example of the complete crosstalk calculation of each interconnect for the layout “AddBCD.MSK” is displayed below. The formulations used for the computation of the crosstalk voltage are shown below.</p>
+  <p><img width="78" height="46" src="analysis_clip_image002.gif"></p>
+  <p><img width="118" height="50" src="analysis_clip_image004.gif"></p>
+  <p><img width="142" height="46" src="analysis_clip_image006.gif"></p>
+  <blockquote>
+    <p><img src="global_ctk.GIF" width="848" height="590"></p>
+  </blockquote>
+  <p>In this figure, the nodes in red correspond to the highest crosstalk noise, while the nodes in blue have almost no noise due to lateral coupling. Vss and Vdd nodes may be removed from the list, and interconnects with length less than a user's defined value may also be removed. The values higher that 30% of VDD may jeopardize the safe behavior of signal propagation. In the list, three internal nodes (i0w9, iow10, iow4) may suffer noise above that limit. However, the evaluation takes into account a worst-case situation where all potential aggressors switch synchronously. A time domain simulation should be conducted including the evaluation of crosstalk noise for these 3 victim nodes to verify that the noise do not reach this worst-case value. </p>
+</blockquote>
+<h2><a name="global_dly"></a>Global Delay Analysis </h2>
+<blockquote>
+  <p>At integrated circuit level, there exist a possibility to evaluate the delay of each interconnect, in a global way, thanks to analytical approximations. In Microwind version 3.1, the delay within interconnects is evaluated using the following formulation:</p>
+  <p><em>delay=0.43*Rline*Cline+0.92*(Rline*Cgate+Rd_mos*(Cline+Cgate)) </em></p>
+  <p>with </p>
+  <p>delay = RC delay of the propagation, (in s) </p>
+  <p>Rline= resistance of the line (in W ) </p>
+  <p>Cline = capacitance of the interconnect (in Farad) </p>
+  <p>Cgate = capacitance of the loading gates (in Farad) </p>
+  <p>Rd_mos = equivalent on resistance of the MOS device driving the interconnect </p>
+  <p>Click <strong>Analysis </strong><strong>-&gt; Global Delay Evaluation </strong> within microwind to access to this command. The example of the complete delay calculation of each interconnect is displayed in the figure below. The classification of each nodes by decreasing delay appears in the navigator window. The worst delay appears at node Y1, with a delay estimated to 412 ps. </p>
+  <p><img src="global_dly.GIF" width="685" height="470"></p>
+</blockquote>
+<p></p>
+  
+<A HREF="index.htm">Back</A>
+</BODY>
+</HTML>

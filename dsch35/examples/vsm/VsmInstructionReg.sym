@@ -1,0 +1,75 @@
+USER SYMBOL by DSCH Ver 3.0
+DATE 26/12/2004 16:20:14
+SYM  #VsmInstructionReg
+BB(0,0,40,130)
+TITLE 10 -2  #VsmInstructionReg
+MODEL 6000
+REC(5,5,30,120)
+PIN(0,120,0.00,0.00)ClearInstrReg
+PIN(0,20,0.00,0.00)LatchInstrReg
+PIN(0,110,0.00,0.00)Data0
+PIN(0,100,0.00,0.00)Data1
+PIN(0,90,0.00,0.00)Data2
+PIN(0,80,0.00,0.00)Data3
+PIN(0,60,0.00,0.00)Instr0
+PIN(0,50,0.00,0.00)Instr1
+PIN(0,40,0.00,0.00)Instr2
+PIN(0,30,0.00,0.00)Instr3
+PIN(0,10,0.00,0.00)MainClock
+PIN(0,70,0.00,0.00)EnableInstrReg
+PIN(40,50,2.00,1.00)IB3
+PIN(40,80,2.00,1.00)IB0
+PIN(40,70,2.00,1.00)IB1
+PIN(40,60,2.00,1.00)IB2
+PIN(40,40,2.00,1.00)ToInstr0
+PIN(40,30,2.00,1.00)ToInstr1
+PIN(40,20,2.00,1.00)ToInstr2
+PIN(40,10,2.00,1.00)ToInstr3
+LIG(0,120,5,120)
+LIG(0,20,5,20)
+LIG(0,110,5,110)
+LIG(0,100,5,100)
+LIG(0,90,5,90)
+LIG(0,80,5,80)
+LIG(0,60,5,60)
+LIG(0,50,5,50)
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(0,10,5,10)
+LIG(0,70,5,70)
+LIG(35,50,40,50)
+LIG(35,80,40,80)
+LIG(35,70,40,70)
+LIG(35,60,40,60)
+LIG(35,40,40,40)
+LIG(35,30,40,30)
+LIG(35,20,40,20)
+LIG(35,10,40,10)
+LIG(5,5,5,125)
+LIG(5,5,35,5)
+LIG(35,5,35,125)
+LIG(35,125,5,125)
+VLG module VsmInstructionReg( ClearInstrReg,LatchInstrReg,Data0,Data1,Data2,Data3,Instr0,Instr1,
+VLG  Instr2,Instr3,MainClock,EnableInstrReg,IB3,IB0,IB1,IB2,
+VLG  ToInstr0,ToInstr1,ToInstr2,ToInstr3);
+VLG  input ClearInstrReg,LatchInstrReg,Data0,Data1,Data2,Data3,Instr0,Instr1;
+VLG  input Instr2,Instr3,MainClock,EnableInstrReg;
+VLG  output IB3,IB0,IB1,IB2,ToInstr0,ToInstr1,ToInstr2,ToInstr3;
+VLG  wire w3,w6,w7,w8,w10,w11,w17,w18;
+VLG  wire w20,w21,w32,w33,w34,w35;
+VLG  not #(59) inv_1(w3,ClearInstrReg);
+VLG  dreg #(19) dreg1_2(w7,w8,Data1,w3,w6);
+VLG  dreg #(19) dreg2_3(w10,w11,Data2,w3,w6);
+VLG  dreg #(19) dreg3_4(w17,w18,Data3,w3,w6);
+VLG  dreg #(19) dreg4_5(w20,w21,Data0,w3,w6);
+VLG  notif1 #(10) notif1_6(IB0,w21,EnableInstrReg);
+VLG  notif1 #(10) notif1_7(IB1,w8,EnableInstrReg);
+VLG  notif1 #(10) notif1_8(IB3,w18,EnableInstrReg);
+VLG  notif1 #(10) notif1_9(IB2,w11,EnableInstrReg);
+VLG  and #(65) and2_10(w6,MainClock,LatchInstrReg);
+VLG  dreg #(12) dreg5_11(ToInstr0,w32,Instr0,w3,w6);
+VLG  dreg #(12) dreg6_12(ToInstr3,w33,Instr3,w3,w6);
+VLG  dreg #(12) dreg7_13(ToInstr2,w34,Instr2,w3,w6);
+VLG  dreg #(12) dreg8_14(ToInstr1,w35,Instr1,w3,w6);
+VLG endmodule
+FSYM

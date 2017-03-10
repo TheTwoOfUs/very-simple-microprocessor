@@ -1,0 +1,24 @@
+DSCH 3.0 - technology file
+NAME "CMOS 90nm"
+VERSION 27.03.2003
+* updated 15.08.2006
+* Time unit for simulation
+TIMEUNIT = 0.01
+* Supply voltage
+VDD = 1.0
+* Typical gate delay in ns
+TDelay = 0.005
+THvDelay = 0.020
+THsDelay = 0.004
+* Typical wire delay in ns
+TWireDelay = 0.005
+* Typical current in mA
+TCurrent = 0.1
+* Default MOS length and width
+ML  = "0.10u"
+MHVL = "0.3u"
+MNW = "0.5u"
+MPW = "1.0u"
+*
+* End cmos90n.tec
+*

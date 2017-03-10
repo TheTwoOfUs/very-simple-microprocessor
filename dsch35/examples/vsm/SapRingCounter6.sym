@@ -1,0 +1,45 @@
+USER SYMBOL by DSCH Ver 3.0
+DATE 21/12/2004 17:13:19
+SYM  #SapRingCounter6
+BB(0,0,40,70)
+TITLE 10 -2  #SapRingCounter6
+MODEL 6000
+REC(5,5,30,60)
+PIN(0,10,0.00,0.00)invClear
+PIN(0,20,0.00,0.00)Phase_Count
+PIN(40,10,2.00,1.00)T1
+PIN(40,20,2.00,1.00)T2
+PIN(40,30,2.00,1.00)T3
+PIN(40,40,2.00,1.00)T4
+PIN(40,50,2.00,1.00)T5
+PIN(40,60,2.00,1.00)T6
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(35,10,40,10)
+LIG(35,20,40,20)
+LIG(35,30,40,30)
+LIG(35,40,40,40)
+LIG(35,50,40,50)
+LIG(35,60,40,60)
+LIG(5,5,5,65)
+LIG(5,5,35,5)
+LIG(35,5,35,65)
+LIG(35,65,5,65)
+VLG module SapRingCounter6( invClear,Phase_Count,T1,T2,T3,T4,T5,T6);
+VLG  input invClear,Phase_Count;
+VLG  output T1,T2,T3,T4,T5,T6;
+VLG  dreg #(12) dreg1(w5,w6,w2,w3,Phase_Count);
+VLG  dreg #(19) dreg2(w7,w8,w5,w3,Phase_Count);
+VLG  dreg #(19) dreg3(w9,w10,w8,w3,Phase_Count);
+VLG  dreg #(12) dreg4(w2,w12,w11,w3,Phase_Count);
+VLG  dreg #(12) dreg5(w11,w17,w16,w3,Phase_Count);
+VLG  dreg #(12) dreg6(w16,w18,w9,w3,Phase_Count);
+VLG  xor #(16) xor2(T6,w5,w7);
+VLG  xor #(16) xor2(T5,w2,w5);
+VLG  xor #(16) xor2(T3,w16,w11);
+VLG  xor #(16) xor2(T1,w7,w10);
+VLG  xor #(16) xor2(T4,w11,w2);
+VLG  xor #(16) xor2(T2,w9,w16);
+VLG  not #(45) inv(w3,invClear);
+VLG endmodule
+FSYM

@@ -1,0 +1,136 @@
+USER SYMBOL by DSCH Ver 3.0
+DATE 23/12/2004 00:23:23
+SYM  #VsmMem4x4
+BB(0,0,20,130)
+TITLE 10 -2  #VsmMem4x4
+MODEL 6000
+REC(5,5,10,120)
+PIN(0,10,0.00,0.00)Write3
+PIN(0,120,0.00,0.00)Mem_In0
+PIN(0,110,0.00,0.00)Mem_In1
+PIN(0,100,0.00,0.00)Mem_In2
+PIN(0,90,0.00,0.00)Mem_In3
+PIN(0,50,0.00,0.00)OutEnable3
+PIN(0,80,0.00,0.00)OutEnable0
+PIN(0,40,0.00,0.00)Write0
+PIN(0,30,0.00,0.00)Write1
+PIN(0,70,0.00,0.00)OutEnable1
+PIN(0,60,0.00,0.00)OutEnable2
+PIN(0,20,0.00,0.00)Write2
+PIN(20,10,2.00,1.00)MemOut3
+PIN(20,20,2.00,1.00)MemOut2
+PIN(20,30,2.00,1.00)MemOut1
+PIN(20,40,2.00,1.00)MemOut0
+LIG(0,10,5,10)
+LIG(0,120,5,120)
+LIG(0,110,5,110)
+LIG(0,100,5,100)
+LIG(0,90,5,90)
+LIG(0,50,5,50)
+LIG(0,80,5,80)
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(0,70,5,70)
+LIG(0,60,5,60)
+LIG(0,20,5,20)
+LIG(15,10,20,10)
+LIG(15,20,20,20)
+LIG(15,30,20,30)
+LIG(15,40,20,40)
+LIG(5,5,5,125)
+LIG(5,5,15,5)
+LIG(15,5,15,125)
+LIG(15,125,5,125)
+VLG module VsmMem4x4( Write3,Mem_In0,Mem_In1,Mem_In2,Mem_In3,OutEnable3,OutEnable0,Write0,
+VLG  Write1,OutEnable1,OutEnable2,Write2,MemOut3,MemOut2,MemOut1,MemOut0);
+VLG  input Write3,Mem_In0,Mem_In1,Mem_In2,Mem_In3,OutEnable3,OutEnable0,Write0;
+VLG  input Write1,OutEnable1,OutEnable2,Write2;
+VLG  output MemOut3,MemOut2,MemOut1,MemOut0;
+VLG  wire w18,w19,w20,w21,w22,w23,w24,w25;
+VLG  wire w26,w27,w28,w29,w30,w31,w32,w33;
+VLG  wire w34,w35,w36,w37,w38,w39,w40,w41;
+VLG  wire w42,w43,w44,w45,w46,w47,w48,w49;
+VLG  wire w50,w51,w52,w53,w54,w55,w56,w57;
+VLG  wire w58,w59,w60,w61,w62,w63,w64,w65;
+VLG  pmos #(23) pmos_1_1(w19,w18,Write3); //  
+VLG  not #(23) inv_2_2(w18,w20);
+VLG  not #(12) inv_3_3(w20,w19);
+VLG  nmos #(23) nmos_4_4(w19,Mem_In3,Write3); //  
+VLG  nmos #(33) nmos_5_5(MemOut3,w18,OutEnable3); //  
+VLG  pmos #(23) pmos_1_6(w22,w21,Write3); //  
+VLG  not #(23) inv_2_7(w21,w23);
+VLG  not #(12) inv_3_8(w23,w22);
+VLG  nmos #(23) nmos_4_9(w22,Mem_In2,Write3); //  
+VLG  nmos #(33) nmos_5_10(MemOut2,w21,OutEnable3); //  
+VLG  pmos #(23) pmos_1_11(w25,w24,Write3); //  
+VLG  not #(23) inv_2_12(w24,w26);
+VLG  not #(12) inv_3_13(w26,w25);
+VLG  nmos #(23) nmos_4_14(w25,Mem_In1,Write3); //  
+VLG  nmos #(33) nmos_5_15(MemOut1,w24,OutEnable3); //  
+VLG  pmos #(23) pmos_1_16(w28,w27,Write3); //  
+VLG  not #(23) inv_2_17(w27,w29);
+VLG  not #(12) inv_3_18(w29,w28);
+VLG  nmos #(23) nmos_4_19(w28,Mem_In0,Write3); //  
+VLG  nmos #(33) nmos_5_20(MemOut0,w27,OutEnable3); //  
+VLG  pmos #(23) pmos_1_21(w31,w30,Write0); //  
+VLG  not #(23) inv_2_22(w30,w32);
+VLG  not #(12) inv_3_23(w32,w31);
+VLG  nmos #(23) nmos_4_24(w31,Mem_In0,Write0); //  
+VLG  nmos #(33) nmos_5_25(MemOut0,w30,OutEnable0); //  
+VLG  pmos #(23) pmos_1_26(w34,w33,Write0); //  
+VLG  not #(23) inv_2_27(w33,w35);
+VLG  not #(12) inv_3_28(w35,w34);
+VLG  nmos #(23) nmos_4_29(w34,Mem_In1,Write0); //  
+VLG  nmos #(33) nmos_5_30(MemOut1,w33,OutEnable0); //  
+VLG  pmos #(23) pmos_1_31(w37,w36,Write0); //  
+VLG  not #(23) inv_2_32(w36,w38);
+VLG  not #(12) inv_3_33(w38,w37);
+VLG  nmos #(23) nmos_4_34(w37,Mem_In2,Write0); //  
+VLG  nmos #(33) nmos_5_35(MemOut2,w36,OutEnable0); //  
+VLG  pmos #(23) pmos_1_36(w40,w39,Write0); //  
+VLG  not #(23) inv_2_37(w39,w41);
+VLG  not #(12) inv_3_38(w41,w40);
+VLG  nmos #(23) nmos_4_39(w40,Mem_In3,Write0); //  
+VLG  nmos #(33) nmos_5_40(MemOut3,w39,OutEnable0); //  
+VLG  pmos #(23) pmos_1_41(w43,w42,Write1); //  
+VLG  not #(23) inv_2_42(w42,w44);
+VLG  not #(12) inv_3_43(w44,w43);
+VLG  nmos #(23) nmos_4_44(w43,Mem_In3,Write1); //  
+VLG  nmos #(33) nmos_5_45(MemOut3,w42,OutEnable1); //  
+VLG  pmos #(23) pmos_1_46(w46,w45,Write1); //  
+VLG  not #(23) inv_2_47(w45,w47);
+VLG  not #(12) inv_3_48(w47,w46);
+VLG  nmos #(23) nmos_4_49(w46,Mem_In2,Write1); //  
+VLG  nmos #(33) nmos_5_50(MemOut2,w45,OutEnable1); //  
+VLG  pmos #(23) pmos_1_51(w49,w48,Write1); //  
+VLG  not #(23) inv_2_52(w48,w50);
+VLG  not #(12) inv_3_53(w50,w49);
+VLG  nmos #(23) nmos_4_54(w49,Mem_In1,Write1); //  
+VLG  nmos #(33) nmos_5_55(MemOut1,w48,OutEnable1); //  
+VLG  pmos #(23) pmos_1_56(w52,w51,Write1); //  
+VLG  not #(23) inv_2_57(w51,w53);
+VLG  not #(12) inv_3_58(w53,w52);
+VLG  nmos #(23) nmos_4_59(w52,Mem_In0,Write1); //  
+VLG  nmos #(33) nmos_5_60(MemOut0,w51,OutEnable1); //  
+VLG  pmos #(23) pmos_1_61(w55,w54,Write2); //  
+VLG  not #(23) inv_2_62(w54,w56);
+VLG  not #(12) inv_3_63(w56,w55);
+VLG  nmos #(23) nmos_4_64(w55,Mem_In0,Write2); //  
+VLG  nmos #(33) nmos_5_65(MemOut0,w54,OutEnable2); //  
+VLG  pmos #(23) pmos_1_66(w58,w57,Write2); //  
+VLG  not #(23) inv_2_67(w57,w59);
+VLG  not #(12) inv_3_68(w59,w58);
+VLG  nmos #(23) nmos_4_69(w58,Mem_In1,Write2); //  
+VLG  nmos #(33) nmos_5_70(MemOut1,w57,OutEnable2); //  
+VLG  pmos #(23) pmos_1_71(w61,w60,Write2); //  
+VLG  not #(23) inv_2_72(w60,w62);
+VLG  not #(12) inv_3_73(w62,w61);
+VLG  nmos #(23) nmos_4_74(w61,Mem_In2,Write2); //  
+VLG  nmos #(33) nmos_5_75(MemOut2,w60,OutEnable2); //  
+VLG  pmos #(23) pmos_1_76(w64,w63,Write2); //  
+VLG  not #(23) inv_2_77(w63,w65);
+VLG  not #(12) inv_3_78(w65,w64);
+VLG  nmos #(23) nmos_4_79(w64,Mem_In3,Write2); //  
+VLG  nmos #(33) nmos_5_80(MemOut3,w63,OutEnable2); //  
+VLG endmodule
+FSYM

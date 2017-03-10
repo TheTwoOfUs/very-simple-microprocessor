@@ -1,0 +1,575 @@
+CIRCUIT D:\Documents and Settings\sicard\Mes documents\software\microwind31\examples\adders\AddBCD.MSK
+*
+* IC Technology: CMOS 65nm general purpose - 8 Metal copper - strain - SiON oxide
+*
+VDD 1 0 DC 1.00
+Vin1 5 0 DC 0 PULSE(0.00 1.00 0.95N 0.05N 0.05N 0.95N 2.00N)
+*
+* List of nodes
+* "Y3" corresponds to n°4
+* "in1" corresponds to n°5
+* "Sup10" corresponds to n°6
+* "i7w3" corresponds to n°7
+* " xor22_fadd4_Add41_i5w1" corresponds to n°8
+* "X4" corresponds to n°9
+* "i0w6" corresponds to n°11
+* " nand21_fadd2_Sub41_i9w4" corresponds to n°14
+* "i1w1" corresponds to n°15
+* " nmos3_i0w12" corresponds to n°16
+* " xor22_fadd2_Sub41_i9w1" corresponds to n°17
+* " pmos3_i0w13" corresponds to n°19
+* " nand23_fadd3_Add41_i4w2" corresponds to n°22
+* " nmos1_i0w14" corresponds to n°23
+* "i0w9" corresponds to n°24
+* "i0w3" corresponds to n°25
+* " nand22_fadd3_Add41_i4w3" corresponds to n°26
+* " nmos4_i0w11" corresponds to n°28
+* "i0w2" corresponds to n°29
+* " nand21_fadd3_Add41_i4w4" corresponds to n°31
+* " nand31_fadd1_Sub41_i7w6" corresponds to n°32
+* " xor22_fadd3_Add41_i4w1" corresponds to n°33
+* " nand23_fadd1_Sub41_i8w2" corresponds to n°36
+* " nand22_fadd1_Sub41_i8w3" corresponds to n°37
+* " nand21_fadd1_Sub41_i8w4" corresponds to n°40
+* "i7w2" corresponds to n°41
+* "i0w4" corresponds to n°42
+* " xor22_fadd1_Sub41_i8w1" corresponds to n°43
+* "i0_PAD (north)" corresponds to n°44
+* " nand23_fadd4_Sub41_i11w2" corresponds to n°46
+* " nand23_fadd2_Add41_i3w2" corresponds to n°48
+* "i0w10" corresponds to n°49
+* " nand22_fadd4_Sub41_i11w3" corresponds to n°50
+* " nand22_fadd2_Add41_i3w3" corresponds to n°51
+* " nand21_fadd4_Sub41_i11w4" corresponds to n°53
+* " nand21_fadd2_Add41_i3w4" corresponds to n°55
+* " xor22_fadd4_Sub41_i11w1" corresponds to n°56
+* " not14_Sub41_i7w7" corresponds to n°57
+* " xor22_fadd2_Add41_i3w1" corresponds to n°58
+* "i7w1" corresponds to n°60
+* "i7w4" corresponds to n°63
+* " xor21_fadd4_Sub41_i0w7" corresponds to n°65
+* " not11_Sub41_i7w8" corresponds to n°66
+* " nand31_fadd3_Sub41_i7w5" corresponds to n°73
+* " nand31_fadd1_Add41_i1w2" corresponds to n°75
+* " and22_Sup101_i6w1" corresponds to n°76
+* " nand23_fadd3_Sub41_i10w2" corresponds to n°77
+* " nand23_fadd1_Add41_i2w2" corresponds to n°79
+* " and21_Sup101_i6w2" corresponds to n°80
+* " nand22_fadd3_Sub41_i10w3" corresponds to n°81
+* " nand22_fadd1_Add41_i2w3" corresponds to n°82
+* " nand21_fadd3_Sub41_i10w4" corresponds to n°84
+* " nand21_fadd1_Add41_i2w4" corresponds to n°85
+* "i1w3" corresponds to n°86
+* " xor22_fadd3_Sub41_i10w1" corresponds to n°87
+* " xor22_fadd1_Add41_i2w1" corresponds to n°88
+* " nand23_fadd4_Add41_i5w2" corresponds to n°92
+* " nand22_fadd4_Add41_i5w3" corresponds to n°95
+* "N100" corresponds to n°100
+* "X1" corresponds to n°102
+* "X2" corresponds to n°103
+* "N104" corresponds to n°104
+* "N105" corresponds to n°105
+* "N106" corresponds to n°106
+* "N107" corresponds to n°107
+* "N108" corresponds to n°108
+* "N109" corresponds to n°109
+* "N110" corresponds to n°110
+* "N111" corresponds to n°111
+* "N112" corresponds to n°112
+* "N113" corresponds to n°113
+* "N114" corresponds to n°114
+* "N115" corresponds to n°115
+* "N116" corresponds to n°116
+* "N117" corresponds to n°117
+* "N118" corresponds to n°118
+* "N119" corresponds to n°119
+* "N120" corresponds to n°120
+* "N121" corresponds to n°121
+* "N122" corresponds to n°122
+* "N123" corresponds to n°123
+* "N124" corresponds to n°124
+* "N125" corresponds to n°125
+* "N126" corresponds to n°126
+* "N127" corresponds to n°127
+* "N128" corresponds to n°128
+* "N129" corresponds to n°129
+* "N130" corresponds to n°130
+* "N131" corresponds to n°131
+* "N132" corresponds to n°132
+* "N133" corresponds to n°133
+* "N134" corresponds to n°134
+* "N135" corresponds to n°135
+* "N136" corresponds to n°136
+* "N137" corresponds to n°137
+* "N138" corresponds to n°138
+* "N139" corresponds to n°139
+* "N140" corresponds to n°140
+* "N141" corresponds to n°141
+* "N142" corresponds to n°142
+* "N143" corresponds to n°143
+* "N144" corresponds to n°144
+* "N145" corresponds to n°145
+* "N146" corresponds to n°146
+* "i7vdd" corresponds to n°147
+* "N148" corresponds to n°148
+* "N149" corresponds to n°149
+*
+* MOS devices
+MN1 104 4 7 0 N1  W= 0.21U L= 0.07U
+MN2 0 5 8 0 N1  W= 0.21U L= 0.07U
+MN3 105 5 104 0 N1  W= 0.21U L= 0.07U
+MN4 0 14 105 0 N1  W= 0.21U L= 0.07U
+MN5 103 9 5 0 N1  W= 0.21U L= 0.07U
+MN6 106 32 4 0 N1  W= 0.21U L= 0.07U
+MN7 0 103 10 0 N1  W= 0.21U L= 0.07U
+MN8 0 1 106 0 N1  W= 0.21U L= 0.07U
+MN9 0 12 11 0 N1  W= 0.21U L= 0.07U
+MN10 107 32 5 0 N1  W= 0.21U L= 0.07U
+MN11 0 57 107 0 N1  W= 0.21U L= 0.07U
+MN12 8 15 12 0 N1  W= 0.21U L= 0.07U
+MN13 108 1 14 0 N1  W= 0.21U L= 0.07U
+MN14 0 8 13 0 N1  W= 0.21U L= 0.07U
+MN15 0 57 108 0 N1  W= 0.21U L= 0.07U
+MN16 109 22 15 0 N1  W= 0.21U L= 0.07U
+MN17 0 18 17 0 N1  W= 0.21U L= 0.07U
+MN18 110 26 109 0 N1  W= 0.21U L= 0.07U
+MN19 0 31 110 0 N1  W= 0.21U L= 0.07U
+MN20 1 57 18 0 N1  W= 0.21U L= 0.07U
+MN21 111 5 22 0 N1  W= 0.21U L= 0.07U
+MN22 0 1 21 0 N1  W= 0.21U L= 0.07U
+MN23 0 102 111 0 N1  W= 0.21U L= 0.07U
+MN24 0 27 24 0 N1  W= 0.21U L= 0.07U
+MN25 112 5 26 0 N1  W= 0.21U L= 0.07U
+MN26 0 9 112 0 N1  W= 0.21U L= 0.07U
+MN27 17 32 27 0 N1  W= 0.21U L= 0.07U
+MN28 113 102 31 0 N1  W= 0.21U L= 0.07U
+MN29 0 17 30 0 N1  W= 0.21U L= 0.07U
+MN30 0 9 113 0 N1  W= 0.21U L= 0.07U
+MN31 65 6 28 0 N1  W= 0.21U L= 0.07U
+MN32 114 36 32 0 N1  W= 0.21U L= 0.07U
+MN33 0 34 33 0 N1  W= 0.21U L= 0.07U
+MN34 115 37 114 0 N1  W= 0.21U L= 0.07U
+MN35 0 40 115 0 N1  W= 0.21U L= 0.07U
+MN36 102 9 34 0 N1  W= 0.21U L= 0.07U
+MN37 49 6 16 0 N1  W= 0.21U L= 0.07U
+MN38 116 41 36 0 N1  W= 0.21U L= 0.07U
+MN39 0 102 35 0 N1  W= 0.21U L= 0.07U
+MN40 0 11 116 0 N1  W= 0.21U L= 0.07U
+MN41 24 6 19 0 N1  W= 0.21U L= 0.07U
+MN42 0 38 29 0 N1  W= 0.21U L= 0.07U
+MN43 117 41 37 0 N1  W= 0.21U L= 0.07U
+MN44 0 66 117 0 N1  W= 0.21U L= 0.07U
+MN45 33 5 38 0 N1  W= 0.21U L= 0.07U
+MN46 1 6 23 0 N1  W= 0.21U L= 0.07U
+MN47 118 11 40 0 N1  W= 0.21U L= 0.07U
+MN48 0 33 39 0 N1  W= 0.21U L= 0.07U
+MN49 0 66 118 0 N1  W= 0.21U L= 0.07U
+MN50 119 46 41 0 N1  W= 0.21U L= 0.07U
+MN51 120 48 42 0 N1  W= 0.21U L= 0.07U
+MN52 121 50 119 0 N1  W= 0.21U L= 0.07U
+MN53 0 45 43 0 N1  W= 0.21U L= 0.07U
+MN54 122 51 120 0 N1  W= 0.21U L= 0.07U
+MN55 0 53 121 0 N1  W= 0.21U L= 0.07U
+MN56 0 55 122 0 N1  W= 0.21U L= 0.07U
+MN57 11 66 45 0 N1  W= 0.21U L= 0.07U
+MN58 123 147 46 0 N1  W= 0.21U L= 0.07U
+MN59 124 75 48 0 N1  W= 0.21U L= 0.07U
+MN60 0 29 123 0 N1  W= 0.21U L= 0.07U
+MN61 0 11 47 0 N1  W= 0.21U L= 0.07U
+MN62 0 9 124 0 N1  W= 0.21U L= 0.07U
+MN63 125 147 50 0 N1  W= 0.21U L= 0.07U
+MN64 0 52 49 0 N1  W= 0.21U L= 0.07U
+MN65 126 75 51 0 N1  W= 0.21U L= 0.07U
+MN66 0 60 125 0 N1  W= 0.21U L= 0.07U
+MN67 0 5 126 0 N1  W= 0.21U L= 0.07U
+MN68 43 41 52 0 N1  W= 0.21U L= 0.07U
+MN69 127 29 53 0 N1  W= 0.21U L= 0.07U
+MN70 128 9 55 0 N1  W= 0.21U L= 0.07U
+MN71 0 60 127 0 N1  W= 0.21U L= 0.07U
+MN72 0 43 54 0 N1  W= 0.21U L= 0.07U
+MN73 0 5 128 0 N1  W= 0.21U L= 0.07U
+MN74 0 59 56 0 N1  W= 0.21U L= 0.07U
+MN75 0 148 57 0 N1  W= 0.21U L= 0.07U
+MN76 0 61 58 0 N1  W= 0.21U L= 0.07U
+MN77 29 60 59 0 N1  W= 0.21U L= 0.07U
+MN78 0 148 60 0 N1  W= 0.21U L= 0.07U
+MN79 9 5 61 0 N1  W= 0.21U L= 0.07U
+MN80 0 29 62 0 N1  W= 0.21U L= 0.07U
+MN81 0 147 63 0 N1  W= 0.21U L= 0.07U
+MN82 0 9 64 0 N1  W= 0.21U L= 0.07U
+MN83 0 67 65 0 N1  W= 0.21U L= 0.07U
+MN84 0 147 66 0 N1  W= 0.21U L= 0.07U
+MN85 0 68 25 0 N1  W= 0.21U L= 0.07U
+MN86 56 147 67 0 N1  W= 0.21U L= 0.07U
+MN87 0 70 6 0 N1  W= 0.21U L= 0.07U
+MN88 58 75 68 0 N1  W= 0.21U L= 0.07U
+MN89 0 56 69 0 N1  W= 0.21U L= 0.07U
+MN90 0 80 70 0 N1  W= 0.21U L= 0.07U
+MN91 0 58 71 0 N1  W= 0.21U L= 0.07U
+MN92 70 76 0 0 N1  W= 0.21U L= 0.07U
+MN93 129 77 73 0 N1  W= 0.21U L= 0.07U
+MN94 0 42 70 0 N1  W= 0.21U L= 0.07U
+MN95 130 79 75 0 N1  W= 0.21U L= 0.07U
+MN96 131 81 129 0 N1  W= 0.21U L= 0.07U
+MN97 132 82 130 0 N1  W= 0.21U L= 0.07U
+MN98 0 84 131 0 N1  W= 0.21U L= 0.07U
+MN99 0 78 76 0 N1  W= 0.21U L= 0.07U
+MN100 0 85 132 0 N1  W= 0.21U L= 0.07U
+MN101 133 7 77 0 N1  W= 0.21U L= 0.07U
+MN102 134 25 78 0 N1  W= 0.21U L= 0.07U
+MN103 135 86 79 0 N1  W= 0.21U L= 0.07U
+MN104 0 25 133 0 N1  W= 0.21U L= 0.07U
+MN105 0 1 134 0 N1  W= 0.21U L= 0.07U
+MN106 0 9 135 0 N1  W= 0.21U L= 0.07U
+MN107 136 7 81 0 N1  W= 0.21U L= 0.07U
+MN108 0 83 80 0 N1  W= 0.21U L= 0.07U
+MN109 137 86 82 0 N1  W= 0.21U L= 0.07U
+MN110 0 63 136 0 N1  W= 0.21U L= 0.07U
+MN111 0 4 137 0 N1  W= 0.21U L= 0.07U
+MN112 138 11 83 0 N1  W= 0.21U L= 0.07U
+MN113 139 25 84 0 N1  W= 0.21U L= 0.07U
+MN114 0 25 138 0 N1  W= 0.21U L= 0.07U
+MN115 140 9 85 0 N1  W= 0.21U L= 0.07U
+MN116 0 63 139 0 N1  W= 0.21U L= 0.07U
+MN117 0 4 140 0 N1  W= 0.21U L= 0.07U
+MN118 141 92 86 0 N1  W= 0.21U L= 0.07U
+MN119 0 89 87 0 N1  W= 0.21U L= 0.07U
+MN120 142 95 141 0 N1  W= 0.21U L= 0.07U
+MN121 0 90 88 0 N1  W= 0.21U L= 0.07U
+MN122 0 1 142 0 N1  W= 0.21U L= 0.07U
+MN123 25 63 89 0 N1  W= 0.21U L= 0.07U
+MN124 9 4 90 0 N1  W= 0.21U L= 0.07U
+MN125 143 15 92 0 N1  W= 0.21U L= 0.07U
+MN126 0 25 91 0 N1  W= 0.21U L= 0.07U
+MN127 0 103 143 0 N1  W= 0.21U L= 0.07U
+MN128 0 9 93 0 N1  W= 0.21U L= 0.07U
+MN129 0 96 1 0 N1  W= 0.21U L= 0.07U
+MN130 144 15 95 0 N1  W= 0.21U L= 0.07U
+MN131 0 97 1 0 N1  W= 0.21U L= 0.07U
+MN132 0 9 144 0 N1  W= 0.21U L= 0.07U
+MN133 87 7 96 0 N1  W= 0.21U L= 0.07U
+MN134 145 86 97 0 N1  W= 0.21U L= 0.07U
+MN135 146 103 1 0 N1  W= 0.21U L= 0.07U
+MN136 0 87 100 0 N1  W= 0.21U L= 0.07U
+MN137 0 9 146 0 N1  W= 0.21U L= 0.07U
+MP1 2 4 7 2 P1  W= 0.56U L= 0.07U
+MP2 2 5 8 2 P1  W= 0.56U L= 0.07U
+MP3 7 5 2 2 P1  W= 0.56U L= 0.07U
+MP4 2 14 7 2 P1  W= 0.56U L= 0.07U
+MP5 10 9 5 2 P1  W= 0.56U L= 0.07U
+MP6 4 32 2 2 P1  W= 0.56U L= 0.07U
+MP7 2 103 10 2 P1  W= 0.56U L= 0.07U
+MP8 2 1 4 2 P1  W= 0.56U L= 0.07U
+MP9 2 12 11 2 P1  W= 0.56U L= 0.07U
+MP10 5 32 2 2 P1  W= 0.56U L= 0.07U
+MP11 2 57 5 2 P1  W= 0.56U L= 0.07U
+MP12 13 15 12 2 P1  W= 0.56U L= 0.07U
+MP13 14 1 2 2 P1  W= 0.56U L= 0.07U
+MP14 2 8 13 2 P1  W= 0.56U L= 0.07U
+MP15 2 57 14 2 P1  W= 0.56U L= 0.07U
+MP16 2 22 15 2 P1  W= 0.56U L= 0.07U
+MP17 11 6 16 2 P1  W= 0.56U L= 0.07U
+MP18 2 18 17 2 P1  W= 0.56U L= 0.07U
+MP19 15 26 2 2 P1  W= 0.56U L= 0.07U
+MP20 2 31 15 2 P1  W= 0.56U L= 0.07U
+MP21 21 57 18 2 P1  W= 0.56U L= 0.07U
+MP22 1 6 19 2 P1  W= 0.56U L= 0.07U
+MP23 22 5 2 2 P1  W= 0.56U L= 0.07U
+MP24 2 1 21 2 P1  W= 0.56U L= 0.07U
+MP25 2 102 22 2 P1  W= 0.56U L= 0.07U
+MP26 25 6 23 2 P1  W= 0.56U L= 0.07U
+MP27 2 27 24 2 P1  W= 0.56U L= 0.07U
+MP28 26 5 2 2 P1  W= 0.56U L= 0.07U
+MP29 2 9 26 2 P1  W= 0.56U L= 0.07U
+MP30 30 32 27 2 P1  W= 0.56U L= 0.07U
+MP31 29 6 28 2 P1  W= 0.56U L= 0.07U
+MP32 31 102 2 2 P1  W= 0.56U L= 0.07U
+MP33 2 17 30 2 P1  W= 0.56U L= 0.07U
+MP34 2 9 31 2 P1  W= 0.56U L= 0.07U
+MP35 2 36 32 2 P1  W= 0.56U L= 0.07U
+MP36 2 34 33 2 P1  W= 0.56U L= 0.07U
+MP37 32 37 2 2 P1  W= 0.56U L= 0.07U
+MP38 2 40 32 2 P1  W= 0.56U L= 0.07U
+MP39 35 9 34 2 P1  W= 0.56U L= 0.07U
+MP40 36 41 2 2 P1  W= 0.56U L= 0.07U
+MP41 2 102 35 2 P1  W= 0.56U L= 0.07U
+MP42 2 11 36 2 P1  W= 0.56U L= 0.07U
+MP43 2 38 29 2 P1  W= 0.56U L= 0.07U
+MP44 37 41 2 2 P1  W= 0.56U L= 0.07U
+MP45 2 66 37 2 P1  W= 0.56U L= 0.07U
+MP46 39 5 38 2 P1  W= 0.56U L= 0.07U
+MP47 40 11 2 2 P1  W= 0.56U L= 0.07U
+MP48 2 33 39 2 P1  W= 0.56U L= 0.07U
+MP49 2 66 40 2 P1  W= 0.56U L= 0.07U
+MP50 2 46 41 2 P1  W= 0.56U L= 0.07U
+MP51 2 48 42 2 P1  W= 0.56U L= 0.07U
+MP52 41 50 2 2 P1  W= 0.56U L= 0.07U
+MP53 2 45 43 2 P1  W= 0.56U L= 0.07U
+MP54 42 51 2 2 P1  W= 0.56U L= 0.07U
+MP55 2 53 41 2 P1  W= 0.56U L= 0.07U
+MP56 2 55 42 2 P1  W= 0.56U L= 0.07U
+MP57 47 66 45 2 P1  W= 0.56U L= 0.07U
+MP58 46 147 2 2 P1  W= 0.56U L= 0.07U
+MP59 48 75 2 2 P1  W= 0.56U L= 0.07U
+MP60 2 29 46 2 P1  W= 0.56U L= 0.07U
+MP61 2 11 47 2 P1  W= 0.56U L= 0.07U
+MP62 2 9 48 2 P1  W= 0.56U L= 0.07U
+MP63 50 147 2 2 P1  W= 0.56U L= 0.07U
+MP64 2 52 49 2 P1  W= 0.56U L= 0.07U
+MP65 51 75 2 2 P1  W= 0.56U L= 0.07U
+MP66 2 60 50 2 P1  W= 0.56U L= 0.07U
+MP67 2 5 51 2 P1  W= 0.56U L= 0.07U
+MP68 54 41 52 2 P1  W= 0.56U L= 0.07U
+MP69 53 29 2 2 P1  W= 0.56U L= 0.07U
+MP70 55 9 2 2 P1  W= 0.56U L= 0.07U
+MP71 2 60 53 2 P1  W= 0.56U L= 0.07U
+MP72 2 43 54 2 P1  W= 0.56U L= 0.07U
+MP73 2 5 55 2 P1  W= 0.56U L= 0.07U
+MP74 2 59 56 2 P1  W= 0.56U L= 0.07U
+MP75 2 148 57 2 P1  W= 0.56U L= 0.07U
+MP76 2 61 58 2 P1  W= 0.56U L= 0.07U
+MP77 62 60 59 2 P1  W= 0.56U L= 0.07U
+MP78 2 148 60 2 P1  W= 0.56U L= 0.07U
+MP79 64 5 61 2 P1  W= 0.56U L= 0.07U
+MP80 2 29 62 2 P1  W= 0.56U L= 0.07U
+MP81 2 147 63 2 P1  W= 0.56U L= 0.07U
+MP82 2 9 64 2 P1  W= 0.56U L= 0.07U
+MP83 2 67 65 2 P1  W= 0.56U L= 0.07U
+MP84 2 147 66 2 P1  W= 0.56U L= 0.07U
+MP85 2 68 25 2 P1  W= 0.56U L= 0.07U
+MP86 69 147 67 2 P1  W= 0.56U L= 0.07U
+MP87 2 70 6 2 P1  W= 0.56U L= 0.07U
+MP88 71 75 68 2 P1  W= 0.56U L= 0.07U
+MP89 2 56 69 2 P1  W= 0.56U L= 0.07U
+MP90 72 80 70 2 P1  W= 0.56U L= 0.07U
+MP91 2 58 71 2 P1  W= 0.56U L= 0.07U
+MP92 74 76 72 2 P1  W= 0.56U L= 0.07U
+MP93 2 77 73 2 P1  W= 0.56U L= 0.07U
+MP94 2 42 74 2 P1  W= 0.56U L= 0.07U
+MP95 2 79 75 2 P1  W= 0.56U L= 0.07U
+MP96 73 81 2 2 P1  W= 0.56U L= 0.07U
+MP97 75 82 2 2 P1  W= 0.56U L= 0.07U
+MP98 2 84 73 2 P1  W= 0.56U L= 0.07U
+MP99 2 78 76 2 P1  W= 0.56U L= 0.07U
+MP100 2 85 75 2 P1  W= 0.56U L= 0.07U
+MP101 77 7 2 2 P1  W= 0.56U L= 0.07U
+MP102 78 25 2 2 P1  W= 0.56U L= 0.07U
+MP103 79 86 2 2 P1  W= 0.56U L= 0.07U
+MP104 2 25 77 2 P1  W= 0.56U L= 0.07U
+MP105 2 1 78 2 P1  W= 0.56U L= 0.07U
+MP106 2 9 79 2 P1  W= 0.56U L= 0.07U
+MP107 81 7 2 2 P1  W= 0.56U L= 0.07U
+MP108 2 83 80 2 P1  W= 0.56U L= 0.07U
+MP109 82 86 2 2 P1  W= 0.56U L= 0.07U
+MP110 2 63 81 2 P1  W= 0.56U L= 0.07U
+MP111 2 4 82 2 P1  W= 0.56U L= 0.07U
+MP112 83 11 2 2 P1  W= 0.56U L= 0.07U
+MP113 84 25 2 2 P1  W= 0.56U L= 0.07U
+MP114 2 25 83 2 P1  W= 0.56U L= 0.07U
+MP115 85 9 2 2 P1  W= 0.56U L= 0.07U
+MP116 2 63 84 2 P1  W= 0.56U L= 0.07U
+MP117 2 4 85 2 P1  W= 0.56U L= 0.07U
+MP118 2 92 86 2 P1  W= 0.56U L= 0.07U
+MP119 2 89 87 2 P1  W= 0.56U L= 0.07U
+MP120 86 95 2 2 P1  W= 0.56U L= 0.07U
+MP121 2 90 88 2 P1  W= 0.56U L= 0.07U
+MP122 2 1 86 2 P1  W= 0.56U L= 0.07U
+MP123 91 63 89 2 P1  W= 0.56U L= 0.07U
+MP124 93 4 90 2 P1  W= 0.56U L= 0.07U
+MP125 92 15 2 2 P1  W= 0.56U L= 0.07U
+MP126 2 25 91 2 P1  W= 0.56U L= 0.07U
+MP127 2 103 92 2 P1  W= 0.56U L= 0.07U
+MP128 2 9 93 2 P1  W= 0.56U L= 0.07U
+MP129 2 96 1 2 P1  W= 0.56U L= 0.07U
+MP130 95 15 2 2 P1  W= 0.56U L= 0.07U
+MP131 2 97 1 2 P1  W= 0.56U L= 0.07U
+MP132 2 9 95 2 P1  W= 0.56U L= 0.07U
+MP133 100 7 96 2 P1  W= 0.56U L= 0.07U
+MP134 98 86 97 2 P1  W= 0.56U L= 0.07U
+MP135 1 103 2 2 P1  W= 0.56U L= 0.07U
+MP136 2 87 100 2 P1  W= 0.56U L= 0.07U
+MP137 2 9 1 2 P1  W= 0.56U L= 0.07U
+*
+C2 2 0 110.008fF
+C4 4 0 16.191fF
+C5 5 0 28.275fF
+C6 6 0 19.500fF
+C7 7 0  8.714fF
+C8 8 0  1.659fF
+C9 9 0 49.374fF
+C10 10 0  0.416fF
+C11 11 0 12.690fF
+C12 12 0  0.672fF
+C13 13 0  0.416fF
+C14 14 0  1.406fF
+C15 15 0  7.223fF
+C16 16 0  1.756fF
+C17 17 0  1.691fF
+C18 18 0  0.672fF
+C19 19 0  1.685fF
+C20 1 0 10.457fF
+C21 21 0  0.416fF
+C22 22 0  1.310fF
+C23 23 0  1.659fF
+C24 24 0  8.498fF
+C25 25 0  9.479fF
+C26 26 0  1.345fF
+C27 27 0  0.672fF
+C28 28 0  1.348fF
+C29 29 0  8.831fF
+C30 30 0  0.416fF
+C31 31 0  1.368fF
+C32 32 0  2.842fF
+C33 33 0  1.626fF
+C34 34 0  0.672fF
+C35 35 0  0.416fF
+C36 36 0  1.283fF
+C37 37 0  1.410fF
+C38 38 0  0.672fF
+C39 39 0  0.416fF
+C40 40 0  1.433fF
+C41 41 0  9.396fF
+C42 42 0  5.871fF
+C43 43 0  1.691fF
+C44 44 0  5.275fF
+C45 45 0  0.672fF
+C46 46 0  1.375fF
+C47 47 0  0.416fF
+C48 48 0  1.277fF
+C49 49 0  7.687fF
+C50 50 0  1.404fF
+C51 51 0  1.371fF
+C52 52 0  0.672fF
+C53 53 0  1.368fF
+C54 54 0  0.416fF
+C55 55 0  1.368fF
+C56 56 0  1.626fF
+C57 57 0  3.185fF
+C58 58 0  1.659fF
+C59 59 0  0.672fF
+C60 60 0  7.470fF
+C61 61 0  0.672fF
+C62 62 0  0.416fF
+C63 63 0  6.416fF
+C64 64 0  0.416fF
+C65 65 0  2.253fF
+C66 66 0  2.730fF
+C67 67 0  0.672fF
+C68 68 0  0.672fF
+C69 69 0  0.416fF
+C70 70 0  0.863fF
+C71 71 0  0.416fF
+C72 72 0  0.131fF
+C73 73 0  0.881fF
+C74 74 0  0.131fF
+C75 75 0  2.810fF
+C76 76 0  1.174fF
+C77 77 0  1.342fF
+C78 78 0  0.709fF
+C79 79 0  1.310fF
+C80 80 0  1.326fF
+C81 81 0  1.371fF
+C82 82 0  1.339fF
+C83 83 0  0.709fF
+C84 84 0  1.374fF
+C85 85 0  1.374fF
+C86 86 0  5.820fF
+C87 87 0  1.626fF
+C88 88 0  1.275fF
+C89 89 0  0.672fF
+C90 90 0  0.672fF
+C91 91 0  0.416fF
+C92 92 0  1.310fF
+C93 93 0  0.416fF
+C94 1 0  2.719fF
+C95 95 0  1.339fF
+C96 96 0  0.672fF
+C97 97 0  0.672fF
+C98 98 0  0.103fF
+C99 99 0  0.241fF
+C100 100 0  0.416fF
+C101 1 0  1.368fF
+C102 102 0 11.768fF
+C103 103 0 12.858fF
+C104 104 0  0.070fF
+C105 105 0  0.070fF
+C106 106 0  0.070fF
+C107 107 0  0.070fF
+C108 108 0  0.070fF
+C109 109 0  0.070fF
+C110 110 0  0.070fF
+C111 111 0  0.070fF
+C112 112 0  0.070fF
+C113 113 0  0.070fF
+C114 114 0  0.070fF
+C115 115 0  0.070fF
+C116 116 0  0.070fF
+C117 117 0  0.070fF
+C118 118 0  0.070fF
+C119 119 0  0.070fF
+C120 120 0  0.070fF
+C121 121 0  0.070fF
+C122 122 0  0.070fF
+C123 123 0  0.070fF
+C124 124 0  0.070fF
+C125 125 0  0.070fF
+C126 126 0  0.070fF
+C127 127 0  0.070fF
+C128 128 0  0.070fF
+C129 129 0  0.070fF
+C130 130 0  0.070fF
+C131 131 0  0.070fF
+C132 132 0  0.070fF
+C133 133 0  0.070fF
+C134 134 0  0.070fF
+C135 135 0  0.070fF
+C136 136 0  0.070fF
+C137 137 0  0.070fF
+C138 138 0  0.070fF
+C139 139 0  0.070fF
+C140 140 0  0.070fF
+C141 141 0  0.070fF
+C142 142 0  0.070fF
+C143 143 0  0.070fF
+C144 144 0  0.070fF
+C145 145 0  0.341fF
+C146 146 0  0.070fF
+C147 147 0  7.349fF
+C148 148 0  0.759fF
+C149 149 0  0.003fF
+*
+*
+* n-MOS BSIM4 :
+* low leakage
+.MODEL N1 NMOS LEVEL=14 VTHO=0.35 U0=0.055 TOXE= 1.1E-9 LINT=0.010U 
++K1 =0.450 K2=0.100 DVT0=2.000
++DVT1=0.750 LPE0=0.200e-9 ETA0=0.080
++NFACTOR=  1.0 U0=0.055 UA=7.000e-15
++WINT=0.005U LPE0=0.200e-9 
++KT1=-0.050 UTE=-1.800 VOFF=0.010
++XJ=0.150U NDEP=170.000e15 PCLM=1.100
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p
+*
+* p-MOS BSIM4:
+* low leakage
+.MODEL P1 PMOS LEVEL=14 VTHO=-0.32 U0=0.027 TOXE= 1.1E-9 LINT=0.010U 
++K1 =0.500 K2=0.100 DVT0=2.000
++DVT1=0.650 LPE0=0.200e-9 ETA0=0.080
++NFACTOR=  1.1 U0=0.027 UA=4.800e-15
++WINT=0.005U LPE0=0.200e-9 
++KT1=-0.060 UTE=-1.800 VOFF=0.010
++XJ=0.150U NDEP=170.000e15 PCLM=0.700
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p
+*
+* Transient analysis
+*
+* (Winspice)
+.options temp=27.0
+.control
+tran 0.1N 500.00N
+print  V(9) V(4) V(9) V(5) V(5) V(102) V(9) V(103) V(9) V(9) V(103) V(6) V(147) V(147) V(6) > out.txt
+plot  V(9) V(4) V(9) V(5) V(5) V(102) V(9) V(103) V(9) V(9) V(103) V(6) V(147) V(147) V(6)
+.endc
+.END

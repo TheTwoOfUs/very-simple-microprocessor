@@ -1,0 +1,80 @@
+USER SYMBOL by DSCH Ver 3.0
+DATE 23/12/2004 14:00:19
+SYM  #VsmDecode4to16
+BB(0,0,40,170)
+TITLE 10 -2  #VsmDecode4to16
+MODEL 6000
+REC(5,5,30,160)
+PIN(0,40,0.00,0.00)Address0
+PIN(0,30,0.00,0.00)Address1
+PIN(0,20,0.00,0.00)Address2
+PIN(0,10,0.00,0.00)Address3
+PIN(40,40,2.00,1.00)OutC
+PIN(40,30,2.00,1.00)OutD
+PIN(40,10,2.00,1.00)OutF
+PIN(40,20,2.00,1.00)OutE
+PIN(40,60,2.00,1.00)OutA
+PIN(40,50,2.00,1.00)OutB
+PIN(40,70,2.00,1.00)Out9
+PIN(40,80,2.00,1.00)Out8
+PIN(40,160,2.00,1.00)Out0
+PIN(40,150,2.00,1.00)Out1
+PIN(40,130,2.00,1.00)Out3
+PIN(40,140,2.00,1.00)Out2
+PIN(40,100,2.00,1.00)Out6
+PIN(40,90,2.00,1.00)Out7
+PIN(40,110,2.00,1.00)Out5
+PIN(40,120,2.00,1.00)Out4
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(0,20,5,20)
+LIG(0,10,5,10)
+LIG(35,40,40,40)
+LIG(35,30,40,30)
+LIG(35,10,40,10)
+LIG(35,20,40,20)
+LIG(35,60,40,60)
+LIG(35,50,40,50)
+LIG(35,70,40,70)
+LIG(35,80,40,80)
+LIG(35,160,40,160)
+LIG(35,150,40,150)
+LIG(35,130,40,130)
+LIG(35,140,40,140)
+LIG(35,100,40,100)
+LIG(35,90,40,90)
+LIG(35,110,40,110)
+LIG(35,120,40,120)
+LIG(5,5,5,165)
+LIG(5,5,35,5)
+LIG(35,5,35,165)
+LIG(35,165,5,165)
+VLG module VsmDecode4to16( Address0,Address1,Address2,Address3,OutC,OutD,OutF,OutE,
+VLG  OutA,OutB,Out9,Out8,Out0,Out1,Out3,Out2,
+VLG  Out6,Out7,Out5,Out4);
+VLG  input Address0,Address1,Address2,Address3;
+VLG  output OutC,OutD,OutF,OutE,OutA,OutB,Out9,Out8;
+VLG  output Out0,Out1,Out3,Out2,Out6,Out7,Out5,Out4;
+VLG  wire w7,w8,w9,w10,;
+VLG  not #(59) inv_1(w7,Address0);
+VLG  not #(59) inv_2(w8,Address1);
+VLG  not #(59) inv_3(w9,Address2);
+VLG  not #(59) inv_4(w10,Address3);
+VLG  nand #(13) nand4_5(OutC,w7,w8,Address2,Address3);
+VLG  nand #(13) nand4_6(OutD,Address0,w8,Address2,Address3);
+VLG  nand #(13) nand4_7(OutF,Address0,Address1,Address2,Address3);
+VLG  nand #(13) nand4_8(OutE,w7,Address1,Address2,Address3);
+VLG  nand #(13) nand4_9(OutA,w7,Address1,w9,Address3);
+VLG  nand #(13) nand4_10(OutB,Address0,Address1,w9,Address3);
+VLG  nand #(13) nand4_11(Out9,Address0,w8,w9,Address3);
+VLG  nand #(13) nand4_12(Out8,w7,w8,w9,Address3);
+VLG  nand #(13) nand4_13(Out0,w7,w8,w9,w10);
+VLG  nand #(13) nand4_14(Out1,Address0,w8,w9,w10);
+VLG  nand #(13) nand4_15(Out3,Address0,Address1,w9,w10);
+VLG  nand #(13) nand4_16(Out2,w7,Address1,w9,w10);
+VLG  nand #(13) nand4_17(Out6,w7,Address1,Address2,w10);
+VLG  nand #(13) nand4_18(Out7,Address0,Address1,Address2,w10);
+VLG  nand #(13) nand4_19(Out5,Address0,w8,Address2,w10);
+VLG  nand #(13) nand4_20(Out4,w7,w8,Address2,w10);
+VLG endmodule
+FSYM

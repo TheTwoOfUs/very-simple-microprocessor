@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Microwind 3.1 - Simulate menu</TITLE>
+<META NAME="Version" CONTENT="8.0.3429">
+<link rel="stylesheet" href="etienne.css" type="text/css">
+<META NAME="Date" CONTENT="08/12/05">
+</HEAD>
+<BODY class="basic">
+<b>
+<h1>Simulate Menu</h1>
+</b>
+<br>
+  <h2><a name="run"></a>Run simulation </h2>
+  <blockquote>
+    <p>The "<strong>Run Simulation</strong>" icon or the command <B>Simulate -&gt; Start Simulation</B> both give access to the automatic extraction and analog simulation of the layout.</p>
+    <UL>
+      <LI>Click on <B>Voltage vs Time</B> to obtain the transient analysis of all visible signals. The delay between the selected<B> start node</B> and selected <B>stop node</B> is computed at VDD/2. You can change the selected <B>start node</B> in the node list, in the right upper menu of the window. You can do the same for the selected <B>stop node</B>. 
+      <LI>Click on <B>Voltage and Currents </B>so as to make all voltage curves appear in the lower window, and the VDD, the VSS and the desired MOS currents appear in the upper window. In that mode, the dissipated power within the simulation is also displayed.
+          <P align=justify></P>
+      <LI>Click on <B>Voltage vs. Voltage</B> to obtain transfer characteristics between the X-axis selected node and the Y-axis selected node. Initially the start node is the first clock or pulse of the node list, and the stop node is the first varying node. This mode is useful for the computing of the Inverter characteristics (commutation point), the DC response of the operational amplifier, or for the Schmitt trigger to see the hysteresis phenomenon. The first simulation computes the value of the <B>stop node</B> for <B>start node</B> varying from 0 to VDD. The second click on "&nbsp;<strong>Simulate</strong>&nbsp;" computes the same for <B>start node</B> varying from VDD to 0.
+    <P></P>
+    <P align=justify></P>
+      <LI>Click on <B>Frequency &amp; Voltages </B>so as to make all voltage curves appear in the lower window, and to plot the variation of the switching frequency of one selected signal. This mode is very useful for monitoring the output signal of oscillators.</LI>
+    </UL> 
+    <p>&nbsp;</p>
+    <UL>
+      <LI><img src="simul.GIF" width="672" height="641">          
+          <P></P>
+        <I>NOTE&nbsp;: </i>You can modify the minimum simulation step <FONT 
+face=Symbol>D</FONT> t, but it may be dangerous. If you increase <FONT 
+face=Symbol>D</FONT> t the simulation speed improves but the numerical error may lead to unstable simulations. If you decrease <FONT face=Symbol>D</FONT> t, the simulation speed is decreased too but the numerical precision is improved. The risk of computing divergence is reduced.</LI>
+    </UL>
+  </blockquote>
+<h2><a name="model"></a>Using Models</h2>
+  <blockquote>
+    <p>Select the model you wish to use to perform simulations. By default, the MOS model is BSIM4. Add a text on the layout starting by &quot;LEVEL1&quot; if you wish to use permanently the MOS level1, &quot;LEVEL3&quot; if you wish to use permanently the MOS level31, &quot;BSIM4&quot; if you wish to use permanently BSIM4. </p>
+    <p>Note: previous versions of Microwind used LEVEL3 as a default model. This was changed for the shake of accuracy. </p>
+</blockquote>
+<h2><a name="simu_params"></a>Simulation Parameters </h2>
+<blockquote>
+    <p>The default extraction includes the removal of redundant boxes (Purge) and the removal of overlaps (Merge). The fast extraction does not handle Purge nor Merge operations.    </p>
+    <p>The MOS level can be chosen between level 1,3 and BSIM4. See the user's manual for more details about those models. Other options concern the computation of lateral capacitance and vertical crosstalk capacitance. The temperature may be changed in this screen.</p>
+</blockquote>
+<h2><a name="layout"></a>Simulation on Layout</h2>
+<blockquote>
+  <p>The simulation is performed directly on the layout with a palette of colors. The most interesting layout files to be simulated in this mode are analog blocks such as the DAC. </p>
+</blockquote>
+<h2><a name="crosstalk"></a>With Crosstalk</h2>
+<blockquote>
+  <p>Crosstalk is a parasitic effect that affects long lines routed close from each other. The proximity of the interconnects creates a coupling effect that provokes crosstalk between the affector and victims. By default, the analog simulator do not consider the crosstalk capacitance. </p>
+  <ul>
+    <li>Use the command <strong>"Simulate" -&gt; "With crosstalk"</strong> to perform analog simulation including the crosstalk capacitance extraction and simulation. </li>
+    <li>Click "Evaluate Min/max" to compute on the screen the maximum amplitude of the crosstalk</li>
+  </ul>
+  <p>There are three types of capacitance for interconnects: capacitance to substrate body, inter-layer capacitance and lateral crosstalk capacitance. The inter-layer capacitance refers vertical coupling between layers, while lateral crosstalk capacitance refer to adjacent interconnect coupling. The crosstalk capacitance value per unit length is given in the design rule file for a predefined interconnect width (w=4<FONT face=Symbol>l</FONT> ) and spacing (d=4<FONT face=Symbol>l</FONT> ). In Microwind, the computed crosstalk capacitance is not dependant on the interconnect width w. The computed crosstalk capacitance value is proportional to 1/d where d is the distance between interconnects.</p>
+  <p>Example: The demonstration of crosstalk can be made with the circuit CrosstalkBig.MSK. The schematic diagram of the circuit corresponds to two strong inverters, and strongly coupled interconnects. We used one interconnect "victim" fixed to Vss, surrounded by two aggressors which are switching, to exhibit the crosstalk effect. </p>
+</blockquote>
+<h2><a name="parameters"></a>Simulation parameters </h2>
+<blockquote>
+  <p>The simulation parameters include the choice of MOS level (level 1, level 3 and BSIM4), the voltage supply and the I/O voltage supply, the operating temperature, and the simulation length. Noise may be added to inputs with a root-mean-square value defined in Volt. At the right side of the window, the SPICE netlist appears.</p>
+  <p><img src="params.GIF" width="743" height="520"></p>
+  <p>&nbsp;</p>
+</blockquote>
+<h2><a name="uv"></a>UV Exposure </h2>
+<blockquote>
+  <P>This command simulates the discharge of floating gates due to a very long exposure to ultra violet light (in practice around 20mn). As a result, all charges stored in floating polysilicon gates are discharged.</P>
+</blockquote>
+<h2><a name="mos"></a>MOS Characteristics </h2>
+<blockquote>
+  <p>Click on the "Mos characteristics" icon situated in the main menu. The Id/Vd curve of the selected MOS (or the default size W=20&micro;m, L=L <I>minimum</I> if no MOS device has been extracted) appears. The I/V curve shows the linear domain in yellow, the saturated domain in orange, the impact-ionization region in red and the sub-theshold region in gray.  </p>
+  <UL><LI>  
+  </UL>
+  <p><img src="mosiv.GIF" width="790" height="552"></p>
+</blockquote>
+<UL>
+  <LI>You may select the MOS level 1, MOS level 3 or MOS BSIM4 models. See the use's manual for more information about these models.   
+  <LI>The effects of the changing of the model parameters can be seen directly on the screen by a click on the little arrows (Up/down) , which change the parameter values. 
+  <LI>Click "Id vs. Vg" to highlight the threshold voltage 
+  <LI>Click "Id(log) vs. Vg" to see the sub-threshold behavior. 
+  <LI>Click "Threshold voltage" to see the evolution of Vt with the channel length (Specially interesting with BSIM4). 
+  <LI>Click "Capacitance" to see the capacitance models for Cgs and Cgd 
+  <LI>Add measurements by clicking &quot;Add Measure&quot; and by selecting a "&nbsp;.MES&nbsp;" file 
+  <LI>Skip from NMOS to PMOS device by a click on the corresponding button 
+  <LI>Select the size of the device in the lower list menu. </LI>
+  <LI>Alter the temperature by a click in the arrows or by altering the default value (27&deg;C) </LI>
+</UL>
+<h2><a name="process_2d"></a>Process Section in 2D</h2>
+<blockquote>
+  <p>Click on the "Process View" icon or <B>"Simulate-&gt; Process Section in 2D"</B> to access process simulation. A mouse-operated line is given and embodies the cross section. The screen below appears. The arrows can be used to move the cross-section to the right or to the left in the X axis, and forward and backward in the Y axis. Zooms in and out are available. Remove the layer names by removing the tick in front of "Layer infos". You may add dielectric values and node names.</p>
+  <blockquote>
+    <p><img src="process2d.GIF" width="764" height="484"></p>
+  </blockquote>
+</blockquote>
+<h2><a name="Process_3d"></a>Process Steps in 3D </h2>
+<blockquote>
+  <p>Click the "3D icon" or <B>"Simulation -&gt; Process Steps in 3D"</B> to see the 3-dimentionnal aspect of your circuit. Click "Next step" to watch how the layout currently edited on the screen will be fabricated using the selected technology. Use the arrows to shift the displayed portion. Zooms in and out are available. </p>
+  <p>In demo mode, the steps of the CMOS process are illustrated in sequence. </p>
+  <p><img src="process3d.GIF" width="695" height="416"></p>
+  </blockquote>
+  <h2><a name="opengl"></a>3D view of the IC (using OpenGL) </h2>
+  <blockquote>
+    <p>A spectacular command “Simulate -&gt; 3D View of the IC” has been added to Microwind v3.1 which enables to draw real-time images of the layout and navigate in fill-3D on the surface or inside the IC. This command is based on OpenGL and offers outstanding picture quality. The user can modify in real-time the viewing position in X,Y,Z and play with light sources to create illustrative views of the layout. </p>
+
+    <p>
+    <blockquote>
+      <p><img src="opengl.GIF" width="894" height="666">
+          </p>
+          </blockquote>
+          </p>
+    </blockquote>
+  </blockquote>
+<p></p>
+  
+<A HREF="index.htm">Back</A>
+</BODY>
+</HTML>
